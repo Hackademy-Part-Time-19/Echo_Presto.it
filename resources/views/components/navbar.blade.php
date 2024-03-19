@@ -2,7 +2,7 @@
 
     <div style="display:flex; align-items:center; justify-content:space-between; bac" class="container-fluid">
         <div style="display:flex; align-items:center; ">
-            <a class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
+            <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="#">Annunci</a>
         </div>
 
@@ -14,10 +14,9 @@
     </div>
     <div style="margin-right: 50px" class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <button style="background-color: #2e9940; border-radius:15px;" > <a class="nav-link " href="#">Login</a></button>
-            <button style="background-color: #2e9940; border-radius:15px;" > <a class="nav-link " href="#">Registrati</a></button>
+            <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" > <a style="color:white;" class="nav-link " href="#">Login</a></button>
+            <button style="background-color: #2e9940;  border-radius:15px;" > <a style="color:white;" class="nav-link " href="{{route('register')}}">Registrati</a></button>
         </div>
     </div>
-
     </div>
 </nav>
