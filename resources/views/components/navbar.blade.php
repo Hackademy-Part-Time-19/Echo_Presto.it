@@ -14,7 +14,7 @@
     </div>
     <div style="margin-right: 50px" class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" > <a style="color:white;" class="nav-link " href="#">Login</a></button>
+            <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" > <a style="color:white;" class="nav-link " href="{{route('login')}}">Login</a></button>
             <button style="background-color: #2e9940;  border-radius:15px;" > <a style="color:white;" class="nav-link " href="{{route('register')}}">Registrati</a></button>
         </div>
     </div>
