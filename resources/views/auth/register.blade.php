@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div style="margin-bottom: 60px; margin-top: 60px;" class="container">
+    <div style=" margin-top: 60px;" class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
 
@@ -27,13 +27,13 @@
                           <input type="password" class="form-control" id="password" placeholder="Password">
                       </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group col-md-6">
                       <label for="address">Indirizzo</label>
                       <input type="text" class="form-control" id="address" placeholder="Via Paolo Rossi 1">
                   </div>
                   <div class="form-row">
                       <div class="form-group col-md-6">
-                          <label for="city">CittÃ </label>
+                          <label for="city">Citta'</label>
                           <input type="text" class="form-control" id="city" placeholder="Milano">
                       </div>
                   </div>

@@ -18,9 +18,9 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/register', function () {
-    return view('register');
+    return view('auth.register');
 })->name('register');
 
 Route::get('/login', function () {
-    return view('login');
+    return view('auth.login');
 })->name('login');
