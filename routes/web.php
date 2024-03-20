@@ -26,5 +26,5 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::get('/nuovo/annuncio',[AnnouncementsController::class, 'createAnnouncement()'])->name('annuncio');
+Route::get('/nuovo/annuncio',[AnnouncementsController::class, 'index'])->name('create');
 
