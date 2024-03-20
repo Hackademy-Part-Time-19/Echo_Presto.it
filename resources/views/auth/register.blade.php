@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div style=" margin-top: 60px;" class="container">
+    <div style=" background: linear-gradient(#030604,#1C6F29) " class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
 

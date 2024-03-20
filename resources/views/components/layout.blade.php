@@ -11,7 +11,7 @@
 
 <body>
     <x-navbar />
-    <div style="min-height: 70vh">
+    <div style="min-height: 70vh;">
         {{ $slot }}
     </div>
     <x-footer />
