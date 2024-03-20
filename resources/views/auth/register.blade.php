@@ -4,7 +4,7 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
 
-              <form action="{{ route('/register')}}" method="POST">
+              <form action="{{ route('register')}}" method="POST">
               @csrf
                 <h2 class="m-3">Registrazione</h2>
                   <div class="form-row">
@@ -26,6 +26,10 @@
                           <label for="inputPassword4">Password</label>
                           <input type="password" class="form-control" id="password" placeholder="Password">
                       </div>
+                      <div class="form-group col-md-6">
+                        <label for="inputPassword4"> Conferma Password</label>
+                        <input type="password" class="form-control" id="password" placeholder=" conferma Password">
+                    </div>
                   </div>
                   <div class="form-group col-md-6">
                       <label for="address">Indirizzo</label>

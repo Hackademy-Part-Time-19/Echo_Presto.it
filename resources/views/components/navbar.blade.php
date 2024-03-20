@@ -16,6 +16,12 @@
         <div class="navbar-nav">
             <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" > <a style="color:white;" class="nav-link " href="{{route('login')}}">Login</a></button>
             <button style="background-color: #2e9940;  border-radius:15px;" > <a style="color:white;" class="nav-link " href="{{route('register')}}">Registrati</a></button>
+            @auth
+            <form action="{{ route('logout') }}" method="POST">
+                @csrf
+                <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" type="submit" class="nav-link">Logout</button>
+            </form>
+            @endauth
         </div>
     </div>
     </div>
