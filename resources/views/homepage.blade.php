@@ -20,10 +20,7 @@
     </header>
 
     <section style= "min-height:100vh; background: linear-gradient(#030604,#1C6F29)">
-        <h2 style="text-align:center; padding-top:80px; color:white; font-size:50px">
-            Scegli tra le categorie presenti
-        </h2>
-        <div style="padding-top:120px; padding-left:460px;" id="carouselExampleSlidesOnly" class="carousel slide "
+        <div style="padding-top:100px; padding-left:460px;" id="carouselExampleSlidesOnly" class="carousel slide "
             data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -51,7 +48,7 @@
     </section>
     <section style= "min-height:100vh; background-color:#1C6F29">
 
-        <div style="display:flex; align-items:center; justify-content:center; padding-top:80px"">
+        <div style="display:flex; align-items:center; justify-content:center;"">
             <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
             <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
                 aria-label="Search">
