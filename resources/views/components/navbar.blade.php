@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-success-subtle" style="background-color:green !important; color:white !important ">
 
-    <div style="display:flex; align-items:center; justify-content:space-between; bac" class="container-fluid">
-        <div style="display:flex; align-items:center; ">
+    <div style="display:flex; align-items:center; justify-content:space-between;" class="container-fluid">
+        <div style="display:flex; align-items:center;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="#">Annunci</a>
         </div>
@@ -14,8 +14,10 @@
     </div>
     <div style="margin-right: 50px" class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
+            @guest
             <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" > <a style="color:white;" class="nav-link " href="{{route('login')}}">Login</a></button>
             <button style="background-color: #2e9940;  border-radius:15px;" > <a style="color:white;" class="nav-link " href="{{route('register')}}">Registrati</a></button>
+            @endguest
             @auth
             <form action="{{ route('logout') }}" method="POST">
                 @csrf

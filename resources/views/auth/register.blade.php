@@ -4,50 +4,28 @@
         <div class="row justify-content-center mt-5">
             <div class="col-md-8">
 
-              <form action="{{ route('register')}}" method="POST">
+              <form action="/register" method="POST">
               @csrf
                 <h2 class="m-3">Registrazione</h2>
                   <div class="form-row">
                       <div class="form-group col-md-6">
                           <label for="name">Nome</label>
-                          <input type="text" class="form-control" id="name" placeholder="Nome">
-                      </div>
-                      <div class="form-group col-md-6">
-                          <label for="surname">Cognome</label>
-                          <input type="text" class="form-control" id="surname" placeholder="Cognome">
+                          <input type="text" class="form-control" id="name" placeholder="Nome" name="name">
                       </div>
                   </div>
                   <div class="form-row">
                       <div class="form-group col-md-6">
                           <label for="inputEmail4">Email</label>
-                          <input type="email" class="form-control" id="email" placeholder="Email">
+                          <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                       </div>
                       <div class="form-group col-md-6">
                           <label for="inputPassword4">Password</label>
-                          <input type="password" class="form-control" id="password" placeholder="Password">
+                          <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                       </div>
                       <div class="form-group col-md-6">
                         <label for="inputPassword4"> Conferma Password</label>
-                        <input type="password" class="form-control" id="password" placeholder=" conferma Password">
+                        <input type="password" class="form-control" id="password_confirmation" placeholder=" conferma Password" name="password_confirmation">
                     </div>
-                  </div>
-                  <div class="form-group col-md-6">
-                      <label for="address">Indirizzo</label>
-                      <input type="text" class="form-control" id="address" placeholder="Via Paolo Rossi 1">
-                  </div>
-                  <div class="form-row">
-                      <div class="form-group col-md-6">
-                          <label for="city">Citta'</label>
-                          <input type="text" class="form-control" id="city" placeholder="Milano">
-                      </div>
-                  </div>
-                  <div class="form-group">
-                      <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="gridCheck">
-                          <label class="form-check-label" for="gridCheck">
-                              Check me out
-                          </label>
-                      </div>
                   </div>
                   <button type="submit" class="btn btn-success">Sign in</button>
               </form>

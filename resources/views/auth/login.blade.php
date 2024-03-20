@@ -10,15 +10,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" id="name" placeholder="Nome">
+                            <input type="text" class="form-control" id="name" placeholder="Nome" name="email">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="surname">Password</label>
-                            <input type="text" class="form-control" id="surname" placeholder="Password">
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="surname"> Conferma Password</label>
-                            <input type="text" class="form-control" id="surname" placeholder="Conferma Password">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
                         </div>
                     </div>
                     <div class="form-group col-md-6 mt-3">
