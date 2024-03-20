@@ -5,7 +5,7 @@
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="#">Annunci</a>
             @auth
-            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="#">Inserisci Annuncio</a>
+            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="{{route('annunci')}}">Inserisci Annuncio</a>
             @endauth
         </div>
 
