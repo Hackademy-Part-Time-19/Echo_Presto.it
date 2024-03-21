@@ -21,12 +21,12 @@ class AnnouncementController extends Controller
      */
     public function showAnnouncement (Announcement $announcement)
     {
-        return view('announcement.show', compact('announcement'));
+        return view('announcement.dettaglio', compact('announcement'));
     }
 
     public function indexAnnouncement ()
     {
-        $announcement = Announcement::paginate(10);
+        $announcement = Announcement::paginate(6);
 
         return view('announcement.index', compact('announcement'));
     }
