@@ -30,6 +30,6 @@ Route::get('/login', function () {
 
 Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('create');
 
-Route::get('/dettaglio/annuncio/{announcement}', [Announcement::class, 'showAnnouncement'])->name('announcement.show');
+Route::get('/dettaglio/annuncio/{announcement}', [Announcement::class, 'showAnnouncement'])->name('announcement.dettaglio');
 
 Route::get('/tutti/annunci', [Announcement::class, 'indexAnnouncement'])->name('announcement.index');
