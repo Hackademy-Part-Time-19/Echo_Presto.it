@@ -1,8 +1,8 @@
 <x-layout>
 
-    <div style="margin-top: 60px;" class="container">
-        <div class="row justify-content-center mt-5">
-            <div class="col-md-8">
+    <div style=" background: linear-gradient(#030604,#1C6F29); height: 600px; " class="container">
+        <div  class="row justify-content-center mt-5">
+            <div style="margin-top:30px; color:white" class="col-md-8">
 
                 <form action="{{ route('login')}}" method="POST">
                     @csrf

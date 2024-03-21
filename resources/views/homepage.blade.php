@@ -19,8 +19,11 @@
         </div>
     </header>
 
-    <section style= "min-height:100vh; background: linear-gradient(#030604,#1C6F29)">
-        <div style="padding-top:100px; padding-left:460px;" id="carouselExampleSlidesOnly" class="carousel slide "
+    <section style= "min-height:80vh; background: linear-gradient(#030604,#1C6F29); position:relative">
+        <div>
+            <h1 style="position: absolute; top:280px; right: 300px; color:white; font-size:80px">..Scegli <br>tra le migliori  10 categorie</p></h1>
+        </div>
+        <div style="position: absolute; top:200px; right:1300px" id="carouselExampleSlidesOnly" class="carousel slide "
             data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -45,9 +48,9 @@
                 </div>
             </div>
         </div>
+       
     </section>
     <section style= "min-height:100vh; background-color:#1C6F29">
-
         <div style="display:flex; align-items:center; justify-content:center;"">
             <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
             <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
@@ -57,12 +60,13 @@
                 Categoria
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                @foreach ($categories as $categorie)
+                <li>
+                    <a style="text-decoration: none" class="dropdown-items">{{ $categorie->name }}</a>
+                </li>
+            @endforeach
             </ul>
-            <button style="margin-right:30px; background-color: #2e9940;" type="button"
-                class="btn btn-success">Citta'</button>
+         
             <button style="background-color: #0f551b;" type="button" class="btn btn-success">CERCA</button>
         </div>
         

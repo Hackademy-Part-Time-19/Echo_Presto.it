@@ -1,8 +1,10 @@
 <x-layout>
+   
 
-    <div style=" background: linear-gradient(#030604,#1C6F29) " class="container">
+    <div style=" background: linear-gradient(#030604,#1C6F29);height: 600px; " class="container">
+        <div></div>
         <div class="row justify-content-center mt-5">
-            <div class="col-md-8">
+            <div style="margin-top:30px; color:white" class="col-md-8">
 
               <form action="/register" method="POST">
               @csrf
@@ -27,7 +29,7 @@
                         <input type="password" class="form-control" id="password_confirmation" placeholder=" conferma Password" name="password_confirmation">
                     </div>
                   </div>
-                  <button type="submit" class="btn btn-success">Sign in</button>
+                  <button style="margin-top:20px" type="submit" class="btn btn-success">Crea Account</button>
               </form>
 
             </div>

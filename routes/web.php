@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AnnouncementsController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AnnouncementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,5 +26,5 @@ Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
 
-Route::get('/nuovo/annuncio',[AnnouncementsController::class, 'index'])->name('create');
+Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('create');
 

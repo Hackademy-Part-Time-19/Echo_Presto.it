@@ -1,4 +1,4 @@
-<footer style="background-color: #2a2a2a; height:250px; display:flex; align-items:center;justify-content:space-evenly; ">
+<footer style="background-color: #2a2a2a; height:268px; display:flex; align-items:center;justify-content:space-evenly; ">
     <div>
         <h2 style="color: white">Team di Sviluppo</h2>
         <ul style="color: white; list-style:none">
