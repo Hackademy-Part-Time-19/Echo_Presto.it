@@ -11,12 +11,12 @@ class FrontController extends Controller
      public function welcome () {
 
         $announcements = Announcement::take(6)->get()->sortByDesc('created_at');
-        
+
         return view('homepage', compact('announcements'));
     }
      public function categoryShow (Category $category) {
-
-        return view('categoryShow', compact('category'));
+        $announcements = $category->announcements()->get();
+        return view('announcement.categoryShow', compact('announcements'));
     }
 
 }

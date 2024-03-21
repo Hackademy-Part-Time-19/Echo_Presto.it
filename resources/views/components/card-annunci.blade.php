@@ -5,7 +5,7 @@
         <h5 class="card-title text-center">{{$body}}</h5>
         <p class="card-text">{{$price}}</p>
         <p class="card-text">{{$category}}</p>
-        <p class="card-text">{{$created_at}}</p>
+        <p class="card-text">{{$createdAt}}</p>
         <div style="display: flex">
             <a href="" class="card-link ">
                 <button style="background: #202020" type="submit" class="btn btn-secondary">Dettagli</button>
