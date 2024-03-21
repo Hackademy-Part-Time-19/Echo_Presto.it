@@ -42,6 +42,6 @@
                 <span class="text-danger">{{ $message }}</span> 
                 @enderror
             </div>
-            <button type="submit" class="btn btn-primary">Crea</button>
+            <button type="submit" class="btn btn-primary" wire:click="store">Crea</button>
     </form>
 </div>

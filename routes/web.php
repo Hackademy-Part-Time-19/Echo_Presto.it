@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\FrontController;
+use App\Models\Announcement;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,17 +16,21 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/', function () {
-    return view('homepage');
-})->name('home');
+Route::get('/',[FrontController::class, 'welcome'])->name('home');
 
-Route::get('/register', function () {
+Route::get('/categoria/{category}',[FrontController::class, 'categoryShow'])->name('categoryShow');
+
+/* Route::get('/register', function () {
     return view('auth.register');
 })->name('register');
 
 Route::get('/login', function () {
     return view('auth.login');
-})->name('login');
+})->name('login'); */
 
-Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->name('create');
+Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('create');
+
+Route::get('/dettaglio/annuncio/{announcement}', [Announcement::class, 'showAnnouncement'])->name('announcement.show');
+
+Route::get('/tutti/annunci', [Announcement::class, 'indexAnnouncement'])->name('announcement.index');
 

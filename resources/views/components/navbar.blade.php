@@ -14,15 +14,15 @@
                           <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
                         <ul class="dropdown-menu">
-                            @foreach ($categories as $categorie)
+                            @foreach ($categories as $category)
                             <li>
-                                <a style="text-decoration: none" class="dropdown-items">{{ $categorie->name }}</a>
+                                <a style="text-decoration: none" class="dropdown-items" href="{{route('categoryShow', compact('category'))}}">{{ $category->name }}</a>
                             </li>
                         @endforeach
                         </ul>
                       </div>
 
-                <a style="margin-left: 50px; color: white; font-size:20px;" class="nav-link active" href="">Benvenuto
+                <a style="margin-left: 50px; color: white; font-size:20px;" class="nav-link active" >Benvenuto
                     {{ auth()->user()->name }}</a>
 
             @endauth

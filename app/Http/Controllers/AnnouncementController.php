@@ -19,9 +19,16 @@ class AnnouncementController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function showAnnouncement (Announcement $announcement)
     {
-        
+        return view('announcement.show', compact('announcement'));
+    }
+
+    public function indexAnnouncement ()
+    {
+        $announcement = Announcement::paginate(10);
+
+        return view('announcement.index', compact('announcement'));
     }
 
     /**

@@ -36,6 +36,7 @@ class CreateAnnouncement extends Component
             'body' => $this->body,
             'price' => $this->price,
         ]);
+        
 
         Auth::user()->announcements()->save($announcement);
 

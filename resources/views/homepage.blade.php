@@ -69,6 +69,34 @@
          
             <button style="background-color: #0f551b;" type="button" class="btn btn-success">CERCA</button>
         </div>
+        <div class="row">
+            @foreach ($announcements as $announcement)
+            <div class="card" style="width: 20rem; margin:10px;">
+                <div class="card-body">
+                    <img style="border-radius:5px;" class="img-fluid" src="" alt="immagine">
+                    <h3 class="card-title text-center">{{$announcement->title}}</h3>
+                    <h5 class="card-title text-center">{{$announcement->body}}</h5>
+                    <p class="card-text">{{$announcement->price}}</p>
+                    <p class="card-text">{{$announcement->category->name}}</p>
+                    <p class="card-text">{{$announcement->created_at}}</p>
+                    <div style="display: flex">
+                        <a href="" class="card-link ">
+                            <button style="background: #202020" type="submit" class="btn btn-secondary">Dettagli</button>
+                            <a href="" class="card-link ">
+                                <button style="background: #202020" type="submit" class="btn btn-secondary">Modifica</button>
+                            </a>
+                            <form style="margin-left:15px;" action=""
+                                method="POST">
+                                @csrf
+                                <button type="submit" class="btn btn-danger">More</button>
+                            </form>
+                        </a>
+                    </div>
+                </div>
+            </div>
+                
+            @endforeach
+        </div>
         
 
     </section>
