@@ -48,7 +48,7 @@
        
     </section>
     <section style= "min-height:100vh; background-color:#1C6F29">
-        <div style="display:flex; align-items:center; justify-content:center; margin-bottom:50px"">
+        <div style="display:flex; align-items:center; justify-content:center;"">
             <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
             <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
                 aria-label="Search">
