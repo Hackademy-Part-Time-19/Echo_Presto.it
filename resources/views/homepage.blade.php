@@ -51,7 +51,7 @@
        
     </section>
     <section style= "min-height:100vh; background-color:#1C6F29">
-        <div style="display:flex; align-items:center; justify-content:center;"">
+        <div style="display:flex; align-items:center; justify-content:center; margin-bottom:50px"">
             <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
             <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
                 aria-label="Search">
@@ -69,9 +69,9 @@
          
             <button style="background-color: #0f551b;" type="button" class="btn btn-success">CERCA</button>
         </div>
-        <div class="row">
+        <div class="row m-3">
             @foreach ($announcements as $announcement)
-            <div class="card" style="width: 20rem; margin:10px;">
+            <div class="card m-4" style="width: 20rem; margin:10px;">
                 <div class="card-body">
                     <img style="border-radius:5px;" class="img-fluid" src="" alt="immagine">
                     <h3 class="card-title text-center">{{$announcement->title}}</h3>
