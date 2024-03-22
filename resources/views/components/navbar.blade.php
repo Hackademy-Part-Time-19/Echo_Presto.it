@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-success-subtle" style="background-color:green !important; color:white !important ">
+<nav id="Navbar" class="navbar navbar-expand-lg bg-success-subtle">
 
     <div style="display:flex; align-items:center; justify-content:space-between;" class="container-fluid">
         <div style="display:flex; align-items:center;">
@@ -9,7 +9,7 @@
                     href="{{ route('create') }}">Inserisci Annuncio</a>
 
                     <div class="btn-group" style="margin-left: 50px" >
-                        <button  style="background-color: #2e9940;"  type="button" class="btn btn-success">Categorie</button>
+                        <button  style="background-color: #2e9940; "  type="button" class="btn btn-success">Categorie</button>
                         <button  style="background-color: #2e9940; " type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                           <span class="visually-hidden">Toggle Dropdown</span>
                         </button>

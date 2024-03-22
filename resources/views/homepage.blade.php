@@ -1,18 +1,15 @@
 <x-layout>
-    <header
-        style="background: url(https://www.ecommercetimes.com/wp-content/uploads/sites/5/2022/03/online-shopping-cart.jpg); height:850px; background-repeat:no-repeat; object-fit:cover; background-position:center; background-size:cover">
+    <header id="HeaderHomepage">
         <div>
-            <h1 style="position: absolute; top:200px; left: 80px; color:white; font-size:80px">..il tuo acquisto <br>ad
+            <h1 id="Slogan">..Il tuo acquisto <br>ad
                 un click di <br> distanza...</h1>
         </div>
-        <div
-            style="position: absolute; top:230px; right:260px; border: 3px solid #333; background-color: rgba(25, 142, 41, 0.668);
-        color: #fff; width: 550px; height: 280px;  text-align:center; padding-top:80px; border-radius:10px; z-index:1">
-            <h3 style="padding-bottom: 20px;  text-shadow: 4px 4px 4px black;">comincia subito a cercare</h3>
+        <div id="SezioneRicerca">
+            <h3 style="padding-bottom: 20px;  text-shadow: 4px 4px 4px black;">Inizia subito a cercare</h3>
             <div class="container-fluid">
                 <div class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search">
-                    <button style="background-color: #2e9940;  border-radius:15px;color:white; width:90px;"
+                    <button style="background-color: #1a1919;  border-radius:15px;color:white; width:90px;"
                         type="submit">Cerca</button>
                 </div>
             </div>

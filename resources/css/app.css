@@ -1,1 +1,42 @@
 @import 'bootstrap';
+
+*{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#Navbar{
+    background-color:#1c6f29 !important; 
+    color:white !important;
+}
+
+#HeaderHomepage{
+    background: url(https://www.ecommercetimes.com/wp-content/uploads/sites/5/2022/03/online-shopping-cart.jpg); 
+    height:90vh; 
+    width: 100%;
+    background-repeat:no-repeat; 
+    object-fit:cover;
+    background-position:center; 
+    background-size:cover;
+    display: flex;
+    align-items: center;
+}
+
+#Slogan{
+    position: absolute; 
+    top:200px;
+    left: 80px; 
+    color:white; 
+    font-size:60px;
+    font-style: italic;
+}
+
+#SezioneRicerca{
+    position: absolute; top:190px; right:170px; border: 3px solid #000000;
+    background-color: rgba(15, 116, 28, 0.668);
+    color: #fff; 
+    width: 500px;
+    height: 250px; 
+    text-align:center;
+    padding-top:80px; 
+    border-radius:10px;
+}
