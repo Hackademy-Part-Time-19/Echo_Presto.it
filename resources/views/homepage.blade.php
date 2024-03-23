@@ -23,10 +23,10 @@
             data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="StyleImgCarousel" src="images/Abbigliamento/negozio di abbigliamento.jpg" class="d-block w-95" alt="...">
+                    <img class="StyleImgCarousel" src="images/Abbigliamento/abbigliamentoCarosello.jpg" class="d-block w-95" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Auto/auto4.jpg" class="d-block w-95" alt="...">
+                    <img class="StyleImgCarousel" src="images/Auto/autoCarosello.jpg" class="d-block w-95" alt="...">
                 </div>
 
                 <div class="carousel-item">
@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Libri/libri.jpg" class="d-block w-90" alt="...">
+                    <img class="StyleImgCarousel" src="images/Libri/libriCarosello.jpg" class="d-block w-90" alt="...">
                 </div>
             </div>
         </div>
