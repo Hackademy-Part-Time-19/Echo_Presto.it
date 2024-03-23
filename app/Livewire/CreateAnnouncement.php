@@ -38,8 +38,6 @@ class CreateAnnouncement extends Component
             'price' => $this->price,
         ]);
 
-      
-
         Auth::user()->announcements()->save($announcement);
        
         
@@ -47,7 +45,7 @@ class CreateAnnouncement extends Component
             session()->flash('error', 'Compila tutti i campi');
             ;
         }else{
-            session()->flash('success', 'Articolo inserito con successo');
+            session()->flash('message', 'Articolo inserito con successo');
         
         } 
 

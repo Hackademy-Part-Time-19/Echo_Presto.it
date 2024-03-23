@@ -75,10 +75,10 @@
                     <h5 class="card-title text-center">{{$announcement->body}}</h5>
                     <p class="card-text">{{$announcement->price}} €</p>
                     <p class="card-text"><a style="text-decoration: none; color:white" href=""> Categoria : {{$announcement->category->name}}</a></p>
-                    <p style="color: white; background-color:#0f551b" class="card-footer">{{$announcement->created_at}} - Autore: {{$announcement->user->name ?? ""}}</p>
+                    <p style="color: white; background-color:#0f551b" class="card-footer">Pubblicato il: {{$announcement->created_at->format('d/m/Y')}} <br> Autore: {{$announcement->user->name ?? ""}}</p>
                     <div style="display: flex; align-items:center; justify-content:end">
                         <a href="" class="card-link ">
-                            <a href="" class="card-link ">
+                            <a href="{{route('dettaglio', compact('announcement'))}}" class="card-link ">
                                 <button style="background: #202020; width:150px" type="submit" class="btn btn-secondary">More</button>
                             </a>
                         </a>

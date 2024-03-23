@@ -8,9 +8,9 @@
     <div style="flex:3;padding:40px">
         <h1 style="color: white" class="mb-4">Crea il tuo Annuncio </h1>
 
-        @if (session()->has('success'))
+        @if (session()->has('message'))
             <div class="alert alert-success flex flex-row justify-center my-2">
-                {{ session('success') }}
+                {{ session('message') }}
             </div>
         @endif
 
