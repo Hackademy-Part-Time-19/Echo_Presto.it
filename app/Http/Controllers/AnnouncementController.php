@@ -21,7 +21,7 @@ class AnnouncementController extends Controller
      */
     public function showAnnouncement (Announcement $announcement)
     {
-        return view('announcement.dettaglio', compact('announcement'));
+       
     }
 
     public function indexAnnouncement ()
@@ -44,7 +44,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        //
+        return view('announcement.dettaglio', compact('announcement'));
     }
 
     /**

@@ -9,7 +9,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body>
+<body style="background-color: #202020">
     <x-navbar />
     <div style="min-height: 70vh;">
         {{ $slot }}

@@ -3,7 +3,7 @@
     <div style="display:flex; align-items:center; justify-content:space-between;" class="container-fluid">
         <div style="display:flex; align-items:center;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
-            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="#">Annunci</a>
+            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="">Annunci</a>
             @auth
                 <a style="margin-left: 50px" class="nav-link active" aria-current="page"
                     href="{{ route('create') }}">Inserisci Annuncio</a>
@@ -13,17 +13,17 @@
                         <button  style="background-color: #2e9940; " type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
                           <span class="visually-hidden">Toggle Dropdown</span>
                         </button>
-                        <ul class="dropdown-menu">
+                        <ul style="background: #2e9940;" class="dropdown-menu">
                             @foreach ($categories as $category)
                             <li>
-                                <a style="text-decoration: none" class="dropdown-items" href="{{route('categoryShow', compact('category'))}}">{{ $category->name }}</a>
+                                <a style="text-decoration: none;color:white;padding:2px;" class="dropdown-items" href="{{route('categoryShow', compact('category'))}}">{{ $category->name }}</a>
                             </li>
+                            <li></li><hr class="dropdown-divider"></li>
                         @endforeach
                         </ul>
                       </div>
 
-                <a style="margin-left: 50px; color: white; font-size:20px;" class="nav-link active" >Benvenuto
-                    {{ auth()->user()->name }}</a>
+               
 
             @endauth
         </div>
@@ -44,9 +44,11 @@
                         href="{{ route('register') }}">Registrati</a></button>
             @endguest
             @auth
+            <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active" aria-current="page">Benvenuto
+                {{ auth()->user()->name }}</a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px" type="submit"
+                    <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px; color:white" type="submit"
                         class="nav-link">Logout</button>
                 </form>
             @endauth

@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Announcement extends Model
 {
     use HasFactory;
-    protected $fillable = ['title', 'body', 'price'];
+    protected $fillable = ['title', 'body', 'price','created_at'];
 
     public function category(){
         return $this->belongsTo(Category::class);

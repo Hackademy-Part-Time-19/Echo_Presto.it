@@ -18,9 +18,9 @@
 
     <section style= "min-height:80vh; background: linear-gradient(#030604,#1C6F29); position:relative">
         <div>
-            <h1 style="position: absolute; top:280px; right: 300px; color:white; font-size:80px">..Scegli <br>tra le migliori  10 categorie</p></h1>
+            <h1 style="position: absolute; top:280px; right: 100px; color:white; font-size:80px">..Scegli <br>tra le migliori <br> 10 categorie</p></h1>
         </div>
-        <div style="position: absolute; top:200px; right:1300px" id="carouselExampleSlidesOnly" class="carousel slide "
+        <div style="position: absolute; top:100px; right:800px" id="carouselExampleSlidesOnly" class="carousel slide "
             data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -47,8 +47,8 @@
         </div>
        
     </section>
-    <section style= "min-height:100vh; background-color:#1C6F29">
-        <div style="display:flex; align-items:center; justify-content:center;"">
+    <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
+        <div style="display:flex; align-items:center; justify-content:center; padding-bottom:50px "">
             <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
             <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
                 aria-label="Search">
@@ -66,32 +66,25 @@
          
             <button style="background-color: #0f551b;" type="button" class="btn btn-success">CERCA</button>
         </div>
-        <div class="row m-3">
+        <div style="align-items:center; justify-content:center" class="row m-2  d-flex  text-center">
             @foreach ($announcements as $announcement)
-            <div class="card m-4" style="width: 20rem; margin:10px;">
+            <div  class="card m-4 col-12 col-md-6" style="width: 26rem; background-color:rgb(153, 185, 152) ">
                 <div class="card-body">
-                    <img style="border-radius:5px;" class="img-fluid" src="" alt="immagine">
+                    <img style="border-radius:5px; height:150px;" class="img-fluid" src="https://cdn.icon-icons.com/icons2/2334/PNG/512/camera_photography_photo_image_picture_icon_142340.png" alt="immagine">
                     <h3 class="card-title text-center">{{$announcement->title}}</h3>
                     <h5 class="card-title text-center">{{$announcement->body}}</h5>
-                    <p class="card-text">{{$announcement->price}}</p>
-                    <p class="card-text">{{$announcement->category->name}}</p>
-                    <p class="card-text">{{$announcement->created_at}}</p>
-                    <div style="display: flex">
+                    <p class="card-text">{{$announcement->price}} €</p>
+                    <p class="card-text"><a style="text-decoration: none; color:white" href=""> Categoria : {{$announcement->category->name}}</a></p>
+                    <p style="color: white; background-color:#0f551b" class="card-footer">{{$announcement->created_at}} - Autore: {{$announcement->user->name ?? ""}}</p>
+                    <div style="display: flex; align-items:center; justify-content:end">
                         <a href="" class="card-link ">
-                            <button style="background: #202020" type="submit" class="btn btn-secondary">Dettagli</button>
                             <a href="" class="card-link ">
-                                <button style="background: #202020" type="submit" class="btn btn-secondary">Modifica</button>
+                                <button style="background: #202020; width:150px" type="submit" class="btn btn-secondary">More</button>
                             </a>
-                            <form style="margin-left:15px;" action=""
-                                method="POST">
-                                @csrf
-                                <button type="submit" class="btn btn-danger">More</button>
-                            </form>
                         </a>
                     </div>
                 </div>
             </div>
-                
             @endforeach
         </div>
         
