@@ -13,7 +13,7 @@
             <h2 style="color: white">Contatti</h2>
             <ul style="color: white; list-style:none">
                 <li>maicol.angelicchio.91@gmail.com</li>
-                <li>ivanlajoya10@gmail.com/li>
+                <li>ivanlajoya10@gmail.com</li>
                 <li>diegolombardi199@gmail.com</li>
                 <li>vincenzotito@icloud.com</li>
             </ul>

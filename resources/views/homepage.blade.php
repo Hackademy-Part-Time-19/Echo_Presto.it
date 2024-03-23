@@ -1,8 +1,7 @@
 <x-layout>
     <header id="HeaderHomepage">
         <div>
-            <h1 id="Slogan">..Il tuo acquisto <br>ad
-                un click di <br> distanza...</h1>
+            <h1 id="Slogan">..IL TUO ACQUISTO <br>AD UN CLICK DI<br> DISTANZA...</h1>
         </div>
         <div id="SezioneRicerca">
             <h3 style="padding-bottom: 20px;  text-shadow: 4px 4px 4px black;">Inizia subito a cercare</h3>
@@ -16,32 +15,30 @@
         </div>
     </header>
 
-    <section style= "min-height:80vh; background: linear-gradient(#030604,#1C6F29); position:relative">
+    <section id="SezioneCategorie">
         <div>
-            <h1 style="position: absolute; top:280px; right: 100px; color:white; font-size:80px">..Scegli <br>tra le migliori <br> 10 categorie</p></h1>
+            <h1 style=" color:white; font-size:70px">..Scegli tra le migliori 10 categorie</p></h1>
         </div>
-        <div style="position: absolute; top:100px; right:800px" id="carouselExampleSlidesOnly" class="carousel slide "
+        <div style="" id="carouselExampleSlidesOnly" class="carousel slide "
             data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img style="height: 600px; width:1000px" src="images/Abbigliamento/negozio di abbigliamento.jpg"
-                        class="d-block w-95" alt="...">
+                    <img class="StyleImgCarousel" src="images/Abbigliamento/negozio di abbigliamento.jpg" class="d-block w-95" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img style="height: 600px; width:1000px" src="images/Auto/auto4.jpg" class="d-block w-95"
-                        alt="...">
+                    <img class="StyleImgCarousel" src="images/Auto/auto4.jpg" class="d-block w-95" alt="...">
                 </div>
+
                 <div class="carousel-item">
-                    <img style="height: 600px; width:1000px" src="images/Telefonia/iphone1.jpg" class="d-block w-90"
-                        alt="...">
+                    <img class="StyleImgCarousel" src="images/Telefonia/iphone1.jpg" class="d-block w-90" alt="...">
                 </div>
+
                 <div class="carousel-item">
-                    <img style="height: 600px; width:1000px" src="images/Giardinaggio/giardinaggio.jpg"
-                        class="d-block w-90" alt="...">
+                    <img class="StyleImgCarousel" src="images/Giardinaggio/giardinaggioCarosello.jpg" class="d-block w-90" alt="...">
                 </div>
+
                 <div class="carousel-item">
-                    <img style="height: 600px; width:1000px" src="images/Libri/libri.jpg" class="d-block w-90"
-                        alt="...">
+                    <img class="StyleImgCarousel" src="images/Libri/libri.jpg" class="d-block w-90" alt="...">
                 </div>
             </div>
         </div>
