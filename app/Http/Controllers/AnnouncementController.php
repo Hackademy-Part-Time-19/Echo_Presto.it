@@ -21,14 +21,14 @@ class AnnouncementController extends Controller
      */
     public function showAnnouncement (Announcement $announcement)
     {
-       
+        return view('announcement.dettaglio', compact('announcement'));
     }
 
     public function indexAnnouncement ()
     {
-        $announcement = Announcement::paginate(6);
+        $announcements = Announcement::paginate(9);
 
-        return view('announcement.index', compact('announcement'));
+        return view('announcement.index', compact('announcements'));
     }
 
     /**
@@ -36,7 +36,7 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -44,7 +44,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-        return view('announcement.dettaglio', compact('announcement'));
+       
     }
 
     /**

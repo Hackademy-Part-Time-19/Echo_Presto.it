@@ -4,7 +4,7 @@
         <div style="display:flex; align-items:center;">
             <img src="images/LogoPresto.png" style="width: 50px; margin-right:10px;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
-            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="">Annunci</a>
+            <a style="margin-left: 50px" class="nav-link active" aria-current="page" href="{{ route('announcement.index') }}">Annunci</a>
             @auth
                 <a style="margin-left: 50px" class="nav-link active" aria-current="page"
                     href="{{ route('create') }}">Inserisci Annuncio</a>

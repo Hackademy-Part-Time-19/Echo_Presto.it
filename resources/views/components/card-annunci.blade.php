@@ -8,13 +8,11 @@
             <h5 class="card-title text-center">{{ $body }}</h5>
             <p class="card-text">{{ $price }} €</p>
             <p class="card-text"><a style="text-decoration: none; color:white" href=""> Categoria : {{$category}}</a></p>
-            <p style="color: white; background-color:#1C6F29" class="card-footer">{{ $created }} - Autore: {{$autore}}</p>
+            <p style="color: white; background-color:#1C6F29" class="card-footer">Pubblicato il: {{ $created }} <br> Autore: {{$autore}}</p>
             <div style="display: flex;align-items:center; justify-content:end">
                 <a href="" class="card-link ">
-                    <a href="" class="card-link ">
                         <button style="background: #202020; width:150px" type="submit"
                             class="btn btn-secondary">More</button>
-                    </a>
                 </a>
             </div>
         </div>
