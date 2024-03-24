@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Presto.it'),
 
     /*
     |--------------------------------------------------------------------------
@@ -182,6 +182,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         App\Providers\FortifyServiceProvider::class,
+        TeamTNT\Scout\TNTSearchScoutServiceProvider::class,
         /*
          * Package Service Providers...
          */

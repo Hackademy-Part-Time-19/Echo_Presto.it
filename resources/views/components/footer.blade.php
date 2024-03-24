@@ -1,4 +1,4 @@
-<footer style="background-color: #2a2a2a; height:300px; padding-top:30px;">
+<footer style="background-color: #2a2a2a; height:350px; padding-top:30px;">
     <div style="display:flex; align-items:center;justify-content:space-evenly; width:100%"">
         <div>
             <h2 style="color: white">Team di Sviluppo</h2>
@@ -19,7 +19,12 @@
             </ul>
         </div>
     </div>
+
+    <div style="width: 100%; display:flex; justify-content:center; align-items:center; margin-top:40px;">
+        <p style="align-self:end;color:white;  width:100%; display:flex; justify-content:center; align-items:center;"> Presto.it - Lavora con noi - Registrati e clicca qui  <a style="padding-left: 20px; color" href="{{route('become.revisor')}}">Diventa Revisore</a> 
+    </div>
+
     <div style="width: 100%; display:flex; justify-content:center; margin-top:30px;">
- <p style="align-self:end;color:white; padding-right:20px; width:14%"> © 2024 Copyright: Presto.it</p>
-</div>
+        <p style="align-self:end;color:white; padding-right:20px; width:14%; display:flex; justify-content:center; align-items:center; "> © 2024 Copyright: Presto.it</p>
+    </div>
 </footer>

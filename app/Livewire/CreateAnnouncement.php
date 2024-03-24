@@ -31,7 +31,6 @@ class CreateAnnouncement extends Component
     public function store()
     {
         $category = Category::find($this->category);
-
         $announcement = $category->announcements()->create([
             'title' => $this->title,
             'body' => $this->body,
@@ -40,33 +39,22 @@ class CreateAnnouncement extends Component
 
         Auth::user()->announcements()->save($announcement);
        
-        
-         if($this->title == '' || $this->body == '' || $this->price == '' || $this->category == ''){
-            session()->flash('error', 'Compila tutti i campi');
-            ;
-        }else{
-            session()->flash('message', 'Articolo inserito con successo');
-        
-        } 
+        session()->flash('message', 'Annuncio inserito con successo!');
 
-        $this->cleanForm();
-        
     }
 
      public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
-    
     }  
 
-
-    public function cleanForm()
+   public function cleanForm()
     {
         $this->title = '';
         $this->body = '';
         $this->price = '';
         $this->category = '';
-    }
+    } 
 
 
     public function render()

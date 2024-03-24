@@ -10,7 +10,7 @@
   <div class="row">
     <div class="col-12">
       <div class="row">
-        @foreach ($announcements as $announcement)
+        @forelse ($announcements as $announcement)
             <div  class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152) ">
                 <div class="card-body">
                     <img style="border-radius:5px; height:150px;" class="img-fluid" src="https://cdn.icon-icons.com/icons2/2334/PNG/512/camera_photography_photo_image_picture_icon_142340.png" alt="immagine">
@@ -28,7 +28,13 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+        @empty
+        <div class="col-12">
+            <div class="alert alert-warning py-3 shadow">
+              <p class="lead">Non ci sono annunci per questa ricerca</p>
+            </div>
+        </div>
+            @endforelse
             {{ $announcements->links() }}
     </div>
   </div>
