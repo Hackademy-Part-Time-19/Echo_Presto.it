@@ -27,5 +27,7 @@ class AppServiceProvider extends ServiceProvider
             view()->share('categories', Category::all()); 
         }
 
+        Paginator::useBootstrap();
+
     }
 }

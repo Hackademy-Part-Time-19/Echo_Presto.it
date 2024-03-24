@@ -38,23 +38,24 @@ class CreateAnnouncement extends Component
         ]);
 
         Auth::user()->announcements()->save($announcement);
-       
-        session()->flash('message', 'Annuncio inserito con successo!');
 
+        session()->flash('message', 'Annuncio inserito con successo!');
+        
+        $this->cleanForm();
     }
 
-     public function updated($propertyName)
+    public function updated($propertyName)
     {
         $this->validateOnly($propertyName);
-    }  
+    }
 
-   public function cleanForm()
+    public function cleanForm()
     {
         $this->title = '';
         $this->body = '';
         $this->price = '';
         $this->category = '';
-    } 
+    }
 
 
     public function render()

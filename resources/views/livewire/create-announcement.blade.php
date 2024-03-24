@@ -64,7 +64,7 @@
                 @enderror
             </div>
             <button style="background-color: #389147; font-weight:bold" type="submit" class="btn btn-success"
-                wire:click="store">Inserisci</button>
+                wire:click.prevent="store">Inserisci</button>
         </form>
     </div>
 </div>
