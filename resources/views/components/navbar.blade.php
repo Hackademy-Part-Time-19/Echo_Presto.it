@@ -5,7 +5,7 @@
             <img src="images/LogoPresto.png" style="width: 50px; margin-right:10px;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">Presto.it</a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page"
-                href="{{ route('announcement.index') }}">Annunci</a>
+                href="{{ route('announcement.index') }}">Annunci</a>  
             @auth
                 <a style="margin-left: 50px" class="nav-link active" aria-current="page"
                     href="{{ route('create') }}">Inserisci Annuncio</a>
@@ -63,6 +63,7 @@
                 <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active"
                     aria-current="page">Benvenuto
                     {{ auth()->user()->name }}</a>
+                    <a style="color:white;margin-right:150px;width:150px;" class="btn btn-primary" href="{{route('work')}}">Lavora con noi</a>    
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px; color:white"

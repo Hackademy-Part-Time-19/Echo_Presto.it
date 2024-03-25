@@ -2,6 +2,7 @@
 
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WorkController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
@@ -42,3 +43,6 @@ Route::get('/rendi/revisore/{user}', [RevisorController::class, 'makeRevisor'])-
 
 // ricerca annuncio
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
+
+Route::get('/work', [WorkController::class, 'showWorkPage'])->name('work');
+Route::get('/work/redirect', [WorkController::class, 'redirectHome'])->name('work.redirect');
