@@ -64,10 +64,10 @@
 
     </section>
     <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
-        <h2 class="text-center" style="font-size: 50px; color:white; font-weight:bold;">Annunci più recenti:</h2>
-        <div style="align-items:center; justify-content:center" class="row m-2 d-flex  text-center">
+        <h2 class="text-center" style="font-size: 50px; color:white; font-weight:bold; margin-bottom:30px">Annunci più recenti:</h2>
+        <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
-                <div class="card m-4 col-12 col-md-4" style="width: 22rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                <div class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400" alt="immagine">
                         <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
