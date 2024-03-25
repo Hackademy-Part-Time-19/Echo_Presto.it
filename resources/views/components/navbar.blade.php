@@ -64,7 +64,7 @@
                 <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active"
                     aria-current="page">Benvenuto
                     {{ auth()->user()->name }}</a>
-                    <a style="color:white;margin-right:150px;width:150px;" class="btn btn-primary" href="{{route('work')}}">Lavora con noi</a>    
+                    <a id="btnWork" class="btn btn-success" href="{{route('work')}}">Lavora con noi</a>    
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px; color:white"

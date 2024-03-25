@@ -11,15 +11,14 @@
     @endif
     <header id="HeaderHomepage">
         <div>
-            <h1 id="Slogan">..IL TUO ACQUISTO <br>AD UN CLICK DI<br> DISTANZA...</h1>
+            <h1 id="Slogan">..IL TUO ACQUISTO AD UN CLICK DI DISTANZA...</h1>
         </div>
         <div id="SezioneRicerca">
-            <h3 style="padding-bottom: 20px;  text-shadow: 4px 4px 4px black;">Inizia subito a cercare</h3>
             <div class="container-fluid">
                 <div class="d-flex m-3" role="search">
                     <form style="margin-left: 30px;  width: 500px;"
                         action="{{ route('announcements.search') }}" method="GET" class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"
+                        <input style="width: 900px" class="form-control me-2" type="search" placeholder="Cerca" aria-label="Search"
                             name="searched">
                         <button style="background-color: #1a1919;  border-radius:15px;color:white; width:90px;"
                             type="submit">Cerca</button>
@@ -65,32 +64,13 @@
 
     </section>
     <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
-        <div style="display:flex; align-items:center; justify-content:center; padding-bottom:50px "">
-            <h3 style="color:white; font-size:30px; margin-right:40px;">Inizia la tua Ricerca</h3>
-            <input style="width:380px; margin-right:30px;" class="form-control me-5 " type="search" placeholder="Cerca"
-                aria-label="Search">
-            <button style="margin-right:30px; background-color: #2e9940;" class="btn btn-success dropdown-toggle"
-                type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Categoria
-            </button>
-            <ul class="dropdown-menu">
-                @foreach ($categories as $categorie)
-                    <li>
-                        <a style="text-decoration: none" class="dropdown-items">{{ $categorie->name }}</a>
-                    </li>
-                @endforeach
-            </ul>
-
-            <button style="background-color: #0f551b;" type="button" class="btn btn-success">CERCA</button>
-        </div>
-        <div style="align-items:center; justify-content:center" class="row m-2  d-flex  text-center">
+        <h2 class="text-center" style="font-size: 50px; color:white; font-weight:bold;">Annunci più recenti:</h2>
+        <div style="align-items:center; justify-content:center" class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
-                <div class="card m-4 col-12 col-md-6" style="width: 26rem; background-color:rgb(153, 185, 152) ">
+                <div class="card m-4 col-12 col-md-4" style="width: 22rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
                     <div class="card-body">
-                        <img style="border-radius:5px; height:150px;" class="img-fluid"
-                            src="https://cdn.icon-icons.com/icons2/2334/PNG/512/camera_photography_photo_image_picture_icon_142340.png"
-                            alt="immagine">
-                        <h3 class="card-title text-center">{{ $announcement->title }}</h3>
+                        <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400" alt="immagine">
+                        <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:white" href=""> Categoria :
@@ -109,9 +89,8 @@
                     </div>
                 </div>
             @endforeach
-        </div>
-
-
+            </div>
+        
     </section>
 
 
