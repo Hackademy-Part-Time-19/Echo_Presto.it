@@ -31,46 +31,36 @@
 
     <section id="SezioneCategorie">
         <div>
-            <h1 style=" color:white; font-size:70px">..Scegli tra le migliori 10 categorie</p>
+            <h1 style=" color:white; font-size:70px;padding:20px">..Scegli tra le migliori 10 categorie</p>
             </h1>
         </div>
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
+        <div style="" id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
             <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
+                <div class="carousel-item active">
+                    <img class="StyleImgCarousel" src="images/Abbigliamento/abbigliamentoCarosello.jpg"
+                        class="d-block w-95" alt="...">
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
+                <div class="carousel-item">
+                    <img class="StyleImgCarousel" src="images/Auto/autoCarosello.jpg" class="d-block w-95"
+                        alt="...">
                 </div>
-              </div>
-              <div class="carousel-item">
-                <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-            
+
+                <div class="carousel-item">
+                    <img class="StyleImgCarousel" src="images/Telefonia/iphone1.jpg" class="d-block w-90"
+                        alt="...">
                 </div>
-              </div>
+
+                <div class="carousel-item">
+                    <img class="StyleImgCarousel" src="images/Giardinaggio/giardinaggioCarosello.jpg"
+                        class="d-block w-90" alt="...">
+                </div>
+
+                <div class="carousel-item">
+                    <img class="StyleImgCarousel" src="images/Libri/libriCarosello.jpg" class="d-block w-90"
+                        alt="...">
+                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-       
+        </div>
 
     </section>
     <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
@@ -78,8 +68,9 @@
             recenti:</h2>
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
-                <div class="card m-4 col-12 col-md-6"
-                    style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+
+                <div class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400"
                             alt="immagine">
