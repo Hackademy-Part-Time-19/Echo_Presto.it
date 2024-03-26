@@ -1,6 +1,6 @@
 <nav id="Navbar" class="navbar navbar-expand-lg bg-success-subtle">
 
-    <div style="display:flex; align-items:center; justify-content:space-between;" class="container-fluid">
+    <div style="display:flex; align-items:center; justify-content:space-between; backgraound-color:" class="container-fluid">
         <div style="display:flex; align-items:center;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('Images/LogoPresto.png') }}" style="width: 50px; margin-right:1vw; margin-left:2vw;">
@@ -64,7 +64,7 @@
                 <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active"
                     aria-current="page">Benvenuto
                     {{ auth()->user()->name }}</a>
-                    <button id="btnWork" class="btn btn-success" href="{{route('work')}}">Lavora con noi</button>    
+                    <a href="{{route('work')}}"><button id="btnWork" class="btn btn-success">Lavora con noi</button> </a>   
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px; color:white"

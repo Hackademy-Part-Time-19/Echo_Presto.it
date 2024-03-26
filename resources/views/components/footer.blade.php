@@ -21,7 +21,7 @@
     </div>
 
     <div style="width: 100%; display:flex; justify-content:center; align-items:center; margin-top:40px;">
-        <p style="align-self:end;color:white;  width:100%; display:flex; justify-content:center; align-items:center;"> Presto.it - Lavora con noi - Registrati e clicca qui  <a style="padding-left: 20px; color" href="{{route('become.revisor')}}">Diventa Revisore</a> 
+        <p style="align-self:end;color:white;  width:100%; display:flex; justify-content:center; align-items:center;"> Presto.it - Lavora con noi - Registrati e clicca qui  <a style="padding-left: 20px; color" href="{{route('work')}}">Diventa Revisore</a> 
     </div>
 
     <div style="width: 100%; display:flex; justify-content:center; margin-top:30px;">
