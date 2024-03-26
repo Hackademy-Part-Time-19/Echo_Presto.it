@@ -31,37 +31,46 @@
 
     <section id="SezioneCategorie">
         <div>
-            <h1 style=" color:white; font-size:70px">..Scegli tra le migliori 10 categorie</p>
+            <h1 style=" color:white; font-size:70px">..Scegli tra le migliori categorie</p>
             </h1>
         </div>
-        <div style="" id="carouselExampleSlidesOnly" class="carousel slide " data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="StyleImgCarousel" src="images/Abbigliamento/abbigliamentoCarosello.jpg"
-                        class="d-block w-95" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Auto/autoCarosello.jpg" class="d-block w-95"
-                        alt="...">
-                </div>
+        <div class="container" id="prod">
 
-                <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Telefonia/iphone1.jpg" class="d-block w-90"
-                        alt="...">
+            <div class="row" style="margin-top:20px;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+                <div style="position: absolute;top:80px; left:40px;z-index: 1000">
+                  <h5 style="color: white;">ABBIGLIAMENTO</h5>
                 </div>
-
-                
-                <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Giardinaggio/giardinaggioCarosello.jpg"
-                        class="d-block w-90" alt="...">
+                <img
+                  class="carosell" src="Images/Abbigliamento/abbigliamentoCarosello.jpg"
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8)">
+              </div>
+              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+                <div style="position: absolute;top:80px; left:40px;z-index: 1000">
+                  <h5 style="color: white;">LAPTOP</h5>
                 </div>
-
-                <div class="carousel-item">
-                    <img class="StyleImgCarousel" src="images/Libri/libriCarosello.jpg" class="d-block w-90"
-                        alt="...">
+                <img
+                class="carosell" src="Images/Laptop/laptop.jpg"
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8)">
+              </div>
+              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+                <div style="position: absolute;top:80px; left:40px;z-index: 1000">
+                  <h5 style="color: white;">SMARTPHONES</h5>
                 </div>
+                <img
+                class="carosell" src="Images/Telefonia/iphone.jpg"
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8)">
+              </div>
+              <div class="col-12 col-sm-12 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+                <div style="position: absolute;top:80px; left:40px;z-index: 1000">
+                  <h5 style="color: white;">CASA</h5>
+                </div>
+                <img
+                class="carosell" src="Images/Arredamento casa/Mobili casa/mobili1.jpg"
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8)">
+              </div>
+              
             </div>
-        </div>
 
     </section>
     <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
