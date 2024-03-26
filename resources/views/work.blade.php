@@ -28,7 +28,7 @@
                 <span class=" small text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <a href="{{route('work.redirect')}}" class="btn btn-primary" style="margin-top:20px;">Diventa Revisore</a>
+            <a href="{{route('work.redirect')}}" class="btn btn-success" style="margin-top:20px;">Diventa Revisore</a>
         </form>
 
 
