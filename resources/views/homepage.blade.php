@@ -50,6 +50,7 @@
                         alt="...">
                 </div>
 
+                
                 <div class="carousel-item">
                     <img class="StyleImgCarousel" src="images/Giardinaggio/giardinaggioCarosello.jpg"
                         class="d-block w-90" alt="...">
