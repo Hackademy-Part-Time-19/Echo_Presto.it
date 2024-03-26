@@ -85,7 +85,7 @@
         </div>
         <div style="align-items:center; justify-content:center" class="row m-2  d-flex  text-center">
             @foreach ($announcements as $announcement)
-                <div class="card m-4 col-12 col-md-6" style="width: 26rem; background-color:rgb(153, 185, 152) ">
+                <div class="card m-4 col-12 col-md-4" style="width: 22rem; background-color:rgb(153, 185, 152) ">
                     <div class="card-body">
                         <img style="border-radius:5px; height:150px;" class="img-fluid"
                             src="https://cdn.icon-icons.com/icons2/2334/PNG/512/camera_photography_photo_image_picture_icon_142340.png"
