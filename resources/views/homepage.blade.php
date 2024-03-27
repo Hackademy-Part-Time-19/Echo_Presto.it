@@ -74,7 +74,7 @@
             </div>
 
     </section>
-    <section style= "min-height:110vh; background-color:#1C6F29; padding:100px">
+    <section id="sectionCard" style= "min-height:110vh; background-color:#1C6F29; padding:100px">
         <h2 class="text-center" style="font-size: 50px; color:white; font-weight:bold; margin-bottom:30px">Annunci più
             recenti:</h2>
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">

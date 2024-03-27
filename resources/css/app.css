@@ -1,13 +1,21 @@
 @import 'bootstrap';
 
 *{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'poppins', sans-serif;
 }
+
+@font-face {
+  font-family: poppins;
+  src: url(/public/font/Poppins/Poppins-Regular.ttf);
+}
+
 
 #Navbar{
     background-color:#1c6f29 !important; 
     color:white !important;
 }
+
+
 
 #HeaderHomepage{
     background: url(https://www.ecommercetimes.com/wp-content/uploads/sites/5/2022/03/online-shopping-cart.jpg); 
@@ -50,7 +58,7 @@
 #SezioneCategorie{
     min-height:80vh; width:100%;
     padding-top: 40px;
-    background: linear-gradient(#030604,#1C6F29); 
+    background: linear-gradient(#010603,#1C6F29); 
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -69,3 +77,27 @@
     width:130px;
     align-items: center;
 }
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .col {
+    width: 100%;
+    float: left;
+    padding: 5px;
+  }
+  
+  .image-container {
+    overflow: hidden;
+  }
+  
+  .carosell {
+    width: 100%;
+    transition: transform 0.5s ease;
+  }
+  
+  .carosell:hover {
+    transform: scale(1.1);
+  }

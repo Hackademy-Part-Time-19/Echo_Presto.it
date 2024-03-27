@@ -40,7 +40,7 @@
                     @empty
                         <div class="col-12">
                             <p class="h1 text-center text-white">Non sono presenti annunci per questa categoria!</p>
-                            <p class="h2 text-center text-white">Pubblicane uno: <a s
+                            <p class="h2 text-center text-white">Pubblicane uno: <a 
                                     href="{{ route('create') }}">Pubblica</a></p>
                         </div>
                     @endforelse

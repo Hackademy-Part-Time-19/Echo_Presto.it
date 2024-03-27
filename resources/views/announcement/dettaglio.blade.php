@@ -40,7 +40,9 @@
                 <h5 class="card-title text-center">{{$announcement->body}}</h5>
                 <p class="card-text">{{$announcement->price}} €</p>
                 <p class="card-text"><a style="text-decoration: none; color:white" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria : {{$announcement->category->name}}</a></p>
-                <p class="card-text">{{$announcement->created_at}}</p>
+                <p style="color: white; background-color:#0f551b" class="card-footer">Pubblicato il:
+                  {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
+                  {{ $announcement->user->name ?? '' }}</p>
                 
             </div>
         </div>
