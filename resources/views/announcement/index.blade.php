@@ -1,5 +1,5 @@
 <x-layout>
-    <div style="background-color: rgb(29, 111, 29)" class="container-fluid p-5  shadow mb-4">
+    <div style="background-color: #151515" class="container-fluid p-5  shadow mb-4">
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center text-white">Elenco Annunci</h1>

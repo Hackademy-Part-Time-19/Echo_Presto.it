@@ -20,7 +20,7 @@
                         method="GET" class="d-flex">
                         <input style="width: 900px" class="form-control me-2" type="search" placeholder="Cerca"
                             aria-label="Search" name="searched">
-                        <button style="background-color: #1a1919;  border-radius:15px;color:white; width:90px;"
+                        <button style="background-color: #1a1919;  border-radius:15px;color:white; width:90px; border:black;"
                             type="submit">Cerca</button>
                     </form>
 
