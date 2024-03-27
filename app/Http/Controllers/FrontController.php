@@ -15,15 +15,14 @@ class FrontController extends Controller
     }
 
      public function categoryShow (Category $category) {
-
         $announcements = $category->announcements()->get();
         return view('announcement.categoryShow', compact('category'));
     }
 
     public function searchAnnouncements(Request $request){
-     
+
         $announcements = Announcement::search($request->searched)->where('is_accepted', true)->paginate(12);
-        
+
         return view('announcement.index', compact('announcements'));
     }
 

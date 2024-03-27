@@ -35,42 +35,50 @@
             </h1>
         </div>
         <div class="container" id="prod">
-            
+
 
             <div class="row" style="margin-top:20px;">
               <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white;">ABBIGLIAMENTO</h5>
+                  <h5 style="color: white; font-weight: bold;">ABBIGLIAMENTO</h5>
                 </div>
+                <a href="{{ route('categoryShow', 9) }}">
                 <img
                   class="carosell" src="Images/Abbigliamento/abbigliamentoCarosello.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8)">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                  </a>
               </div>
               <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white;">LAPTOP</h5>
+                  <h5 style="color: white; font-weight: bold">LAPTOP</h5>
                 </div>
+                <a href="{{ route('categoryShow', 1) }}">
                 <img
                 class="carosell" src="Images/Laptop/laptop.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8)">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                </a>
               </div>
               <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white;">SMARTPHONES</h5>
+                  <h5 style="color: white; font-weight: bold">SMARTPHONES</h5>
                 </div>
+                <a href="{{ route('categoryShow', 8) }}">
                 <img
                 class="carosell" src="Images/Telefonia/iphone.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8)">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                </a>
               </div>
               <div class="col-12 col-sm-12 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white;">CASA</h5>
+                  <h5 style="color: white; font-weight: bold">CASA</h5>
                 </div>
+                <a href="{{ route('categoryShow', 2) }}">
                 <img
                 class="carosell" src="Images/Arredamento casa/Mobili casa/mobili1.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8)">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                </a>
               </div>
-              
+
             </div>
 
     </section>
@@ -80,7 +88,7 @@
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
 
-                <div class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                <div class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
 
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400"
