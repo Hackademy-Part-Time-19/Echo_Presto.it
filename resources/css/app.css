@@ -17,6 +17,7 @@
 
 ::-webkit-scrollbar {
   width: 10px;
+  background-color: #202020;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -25,15 +26,15 @@
 }
 
 ::-webkit-scrollbar-corner {
-    background-color: #1c6f29;
+    background-color: #202020;
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #1c6f29;
+    background-color: white;
     border-radius: 10px;
 }
 
