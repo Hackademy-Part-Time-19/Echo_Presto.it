@@ -160,19 +160,13 @@
     color: #fff;
     text-decoration: none;
   }
-  
-  .pg-footer {
-    font-family: 'Roboto', sans-serif;
-  }
-
-  
-  
-  
+   
   .footer {
       background-color: #02030b;
       color: #fff;
       height:600px;
   }
+
   .footer-wave-svg {
       background-color: transparent;
       display: block;
@@ -181,6 +175,7 @@
       top: -1px;
       width: 100%;
   }
+
   .footer-wave-path {
       fill: #1C6F29;
   }
@@ -233,89 +228,7 @@
   .footer-menu-list li {
       margin-top: 5px;
   }
-  
-  .footer-call-to-action-description {
-      color: #fffff2;
-      margin-top: 10px;
-      margin-bottom: 20px;
-  }
-  .footer-call-to-action-button:hover {
-      background-color: #fffff2;
-      color: #00bef0;
-  }
-  .button:last-of-type {
-      margin-right: 0;
-  }
-  .footer-call-to-action-button {
-      background-color: #23c00f;
-      border-radius: 21px;
-      color: #fffff2;
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      line-height: 18px;
-      padding: 12px 30px;
-      margin: 0 10px 10px 0;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: background-color .2s;
-      cursor: pointer;
-      position: relative;
-  }
-  .footer-call-to-action {
-      margin-top: 30px;
-  }
-  .footer-call-to-action-title {
-      color: #fffff2;
-      font-size: 14px;
-      font-weight: 900;
-      letter-spacing: .1em;
-      line-height: 18px;
-      margin-bottom: 0;
-      margin-top: 0;
-      text-transform: uppercase;
-  }
-  .footer-call-to-action-link-wrapper {
-      margin-bottom: 0;
-      margin-top: 10px;
-      color: #fff;
-      text-decoration: none;
-  }
-  .footer-call-to-action-link-wrapper a {
-      color: #fff;
-      text-decoration: none;
-  }
-
-  .footer-social-amoeba-path {
-      fill: #061519;
-  }
-  
-  .hidden-link-text {
-      position: absolute;
-      clip: rect(1px 1px 1px 1px);
-      clip: rect(1px,1px,1px,1px);
-      -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
-      clip-path: inset(0px 0px 99.9% 99.9%);
-      overflow: hidden;
-      height: 1px;
-      width: 1px;
-      padding: 0;
-      border: 0;
-      top: 50%;
-  }
-  
-  .footer-social-icon-svg {
-      display: block;
-  }
-  
-  .footer-social-icon-path {
-      fill: #fffff2;
-      transition: fill .2s;
-  }
-  
-  
-  
+ 
   .footer-copyright {
       background-color: #1c6f29;
       color: #fff;
@@ -368,17 +281,6 @@
       position: relative;
     }
   }
-  @media (min-width:801px)  { 
-  }
-  @media (min-width:1025px) { 
-  
-  }
-  @media (min-width:1281px) {
-  
-  }
-  
-  
-  
   
   @media (min-width: 760px) {
     .footer-content {
@@ -397,6 +299,4 @@
         width: 24.99%;
     }
   }
-  @media (min-width: 568px) {
-   
-  }
+ 
