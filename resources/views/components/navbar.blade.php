@@ -1,12 +1,12 @@
 <nav id="Navbar" class="navbar navbar-expand-lg bg-success-subtle">
 
-    <div style="display:flex; align-items:center; justify-content:space-between; backgraound-color:" class="container-fluid">
+    <div style="display:flex; align-items:center; justify-content:space-between" class="container-fluid">
         <div style="display:flex; align-items:center;">
             <a style="color: white; font-size:26px" class="navbar-brand" href="{{ route('home') }}">
             <img src="{{ asset('Images/LogoPresto.png') }}" style="width: 50px; margin-right:1vw; margin-left:2vw;">
             </a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page"
-                href="{{ route('announcement.index') }}">Annunci</a>  
+                href="{{ route('announcement.index') }}">Annunci</a>
             @auth
                 <a style="margin-left: 50px" class="nav-link active" aria-current="page"
                     href="{{ route('create') }}">Inserisci Annuncio</a>
@@ -64,7 +64,9 @@
                 <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active"
                     aria-current="page">Benvenuto
                     {{ auth()->user()->name }}</a>
-                    <a href="{{route('work')}}"><button style="width: max-content; margin-top:4px" id="btnWork" class="btn btn-success">Lavora con noi</button> </a>   
+                    @if (Auth::check() && (Auth::user()->is_revisor === 0 ))
+                    <a href="{{route('work')}}"><button style="width: max-content; margin-top:4px" id="btnWork" class="btn btn-success">Lavora con noi</button> </a>
+                    @endif
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button style="background-color: #2e9940;  border-radius:15px; margin-right:18px; color:white"

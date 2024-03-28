@@ -55,12 +55,13 @@
                                 </li>
                             </ul>
                         </div>
-
+                        @if (Auth::check() && (Auth::user()->is_revisor === 0 ))
                         <div class="footer-menu" style="flex:3;display:flex;flex-direction:column;align-items:center;">
                             <h2 class="footer-menu-name">Lavora con noi</h2>
                             <P>Registrati e clicca qui:</P>
-                            <button class="btn btn-success"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>        
+                            <button class="btn btn-success"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>
                         </div>
+                        @endif
 
                     </div>
 
