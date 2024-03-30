@@ -1,11 +1,11 @@
 <x-layout>
 
-    <div style="display:flex; align-items:center;justify-content:center; background-image: url('https://assets-global.website-files.com/5a9ee6416e90d20001b20038/64d14feca4cb71202bb97e89_%20-%204.jpg'); background-size:cover; background-repeat: no-repeat; height:500px" class="container mt-5">
-        <div style="flex:5; margin-left:40px; margin-right:10px">
+    <div style="display:flex; align-items:center;justify-content:center;  height:500px" class="container mt-5">
+        <div style="flex:5.3; margin-left:40px; margin-right:10px">
             <img style=" width:100%;  border-top-left-radius:20px;border-bottom-left-radius:20px; box-shadow: 4px 4px 8px rgba(0, 36, 12, 1.5);"
                 src="https://static.vecteezy.com/ti/vettori-gratis/p1/3689251-registrazione-online-o-registrazione-login-per-account-su-smartphone-app-interfaccia-utente-con-password-sicura-applicazione-mobile-per-interfaccia-utente-accesso-banner-web-cartoon-persone-illustrazione-vettoriale.jpg" alt="">
         </div>
-        <div  style="flex:6;display:flex;flex-direction:column;background-color:rgba(0, 121, 40, 0.5);border-top-right-radius:20px;border-bottom-right-radius:20px; padding:20px">
+        <div  style="flex:6.8;display:flex;flex-direction:column;background-color:#6CA7DD;border-top-right-radius:20px;border-bottom-right-radius:20px; padding:20px">
             <form style="color: white;" action="{{ route('register') }}" method="POST">
                 @csrf
                 <h2 style="font-weight: 600">Registrati</h2>

@@ -11,9 +11,6 @@
 
 }
 
-::-webkit-scrollbar-corner {
-  background-color: #1c6f29;
-}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -22,7 +19,7 @@
 
 ::-webkit-scrollbar-thumb {
   background-color: #e8f0e9;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -30,25 +27,26 @@
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 
 #Navbar{
-    background-color:#1c6f29 !important; 
+    background-color:#6CA7DD !important; 
     color:white !important;
+    
 }
 
 
 
 #HeaderHomepage{
-    background: url(https://www.ecommercetimes.com/wp-content/uploads/sites/5/2022/03/online-shopping-cart.jpg); 
-    height:90vh; 
+    background: url(https://www.eglobeits.com/wp-content/uploads/2022/12/Adding-A-Shopping-Cart-Price-Rule-In-Magento.jpg); 
+    height: 80vh;
     width: 100%;
     background-repeat:no-repeat; 
     object-fit:cover;
@@ -58,20 +56,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 150px;
+
 }
 
 #Slogan{
     color:rgb(255, 255, 255); 
     font-size:60px;
-    font-weight: bold;
+    font-weight: 700;
     font-style: italic;
-    text-shadow: 10px 6px 4px rgba(0, 0, 0, 0.9);
+    text-align: center;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
     -webkit-text-stroke: #030604 0.9px;
+  position: absolute;
+  top: 18%;
+  left: 15%;
 }
 
 #SezioneRicerca{
-    background-color: hsla(129, 60%, 27%, 0.692);
+    background-color: #2414da;
     color: #fff; 
     width: 600px;
     height: 100px; 
@@ -81,14 +83,14 @@
     -webkit-box-shadow: 7px 6px 9px 12px rgba(0,0,0,0.82);
     -moz-box-shadow: 7px 6px 9px 12px rgba(0,0,0,0.82);
     box-shadow: 7px 6px 9px 12px rgba(0,0,0,0.82);
-    margin-top: 50px;
-}
+    margin-bottom: 100px;
+    }
 
 
 #SezioneCategorie{
     min-height:80vh; width:100%;
     padding-top: 40px;
-    background: linear-gradient(#010603,#1C6F29); 
+    background-color: #fffff2; 
     display: flex;
     flex-direction: column;
     align-items: center;  
@@ -100,7 +102,7 @@
 } 
 
 #btnWork{
-    background-color: #2e9940;
+    background-color: #2414da;
     border: none;
     color:white;
     margin-right:90px;
@@ -163,9 +165,9 @@
   }
    
   .footer {
-      background-color: #02030b;
+      background-color: #2414da;
       color: #fff;
-      height:600px;
+      height:480px;
   }
 
   .footer-wave-svg {
@@ -178,7 +180,7 @@
   }
 
   .footer-wave-path {
-      fill: #1C6F29;
+      fill:  #fffff2; 
   }
   
   .footer-content {
@@ -231,12 +233,11 @@
   }
  
   .footer-copyright {
-      background-color: #1c6f29;
+      background-color: #6CA7DD;
       color: #fff;
-      padding: 35px 200px;
+      padding: 20px 200px;
       text-align: center;
       display: flex;
-      
       width:100%;
   }
   

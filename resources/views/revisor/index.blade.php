@@ -1,5 +1,5 @@
 <x-layout>
-    <div style="background-color: rgb(29, 111, 29)" class="container-fluid p-5 p-5 shadow mb-4">
+    <div style="background-color:#2414da" class="container-fluid p-5 p-5 shadow mb-4">
         <div class="row">
             <div style="" class="col-12 text-light p-5">
                 <h1 class="text-center text-white">
@@ -13,7 +13,7 @@
             <div class="row">
                 <div style="display:flex; align-items:center; justify-content:center;"" class="col-12 d-flex">
                     <div class="card m-4 col-12 col-md-6 row m-2  d-flex  text-center"
-                        style="width: 50rem; background-color:rgb(153, 185, 152) ">
+                        style="width: 50rem; ">
                         <div class="card-body">
                             <img style="border-radius:5px;" class="img-fluid"
                                 src="https://picsum.photos/500/400" class="d-block w-100"
@@ -21,15 +21,15 @@
                             <h3 class="card-title text-center">{{ $announcement_to_check->title }}</h3>
                             <h5 class="card-title text-center">{{ $announcement_to_check->body }}</h5>
                             <p class="card-text">{{ $announcement_to_check->price }} €</p>
-                            <p class="card-text"><a style="text-decoration: none; color:white" href="">
+                            <p class="card-text"><a style="text-decoration: none; color:black;" href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}">
                                     Categoria : {{ $announcement_to_check->category->name }}</a></p>
-                            <p style="color: white; background-color:#0f551b" class="card-footer">Pubblicato il:
+                            <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
                                 {{ $announcement_to_check->created_at->format('d/m/Y') }} <br> Autore:
                                 {{ $announcement_to_check->user->name ?? '' }}</p>
                             <div style="display: flex; align-items:center; justify-content:end">
                                 <a href="" class="card-link ">
                                     <a href="" class="card-link ">
-                                        <button style="background: #202020; width:150px" type="submit"
+                                        <button style="background: #2414da; width:150px" type="submit"
                                             class="btn btn-secondary">More</button>
                                     </a>
                                 </a>

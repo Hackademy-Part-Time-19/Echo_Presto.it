@@ -11,7 +11,7 @@
                 <div class="footer-content-column">
                     <div class="footer-logo">
                         <a class="footer-logo-link"href="{{ route('home') }}">
-                            <img src="{{ asset('Images/LogoPresto4.png') }}" style="width:100px;height:100px;">
+                            <img src="{{ asset('Images/LogoPrestoFooter.png') }}" style="width:100px;height:100px;">
                         </a>
                     </div>
 
@@ -59,7 +59,7 @@
                         <div class="footer-menu" style="flex:3;display:flex;flex-direction:column;align-items:center;">
                             <h2 class="footer-menu-name">Lavora con noi</h2>
                             <P>Registrati e clicca qui:</P>
-                            <button class="btn btn-success"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>
+                            <button class="btn btn-success" style="background-color: #6CA7DD"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>
                         </div>
                         @endif
 

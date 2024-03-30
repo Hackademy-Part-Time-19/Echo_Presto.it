@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div style="display:flex; align-items:center;justify-content:center; background: linear-gradient(#030604,#1C6F29);"
+    <div style="display:flex; align-items:center;justify-content:center; background-color:#6CA7DD;"
     class="container mt-5">
     <div style="flex:5; ">
         <img style=" width:100%; height:100%;padding:40px"
@@ -9,7 +9,7 @@
     <div class="row justify-content-center mt-3 " style="flex:6;padding:40px; width:100%">
         <form style="color: white;" action="{{ route('register') }}" method="POST">
             @csrf
-            <h2 class="m-3">Richiesta per diventare Revisore</h2>
+            <h2>Richiesta per diventare Revisore</h2>
             <div class="form-row ">
                 <div class="form-group col-md-9">
                     <label for="name">Nome</label>
@@ -28,7 +28,7 @@
                 <span class=" small text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <a href="{{route('work.redirect')}}" class="btn btn-success" style="margin-top:20px;">Diventa Revisore</a>
+            <a href="{{route('work.redirect')}}" class="btn btn-success" style="margin-top:20px; background-color:#2414da">Diventa Revisore</a>
         </form>
 
 
