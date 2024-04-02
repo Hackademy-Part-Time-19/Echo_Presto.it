@@ -1,5 +1,5 @@
 <div
-    style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background: linear-gradient(#030604,#1C6F29);">
+    style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px">
     <div style="flex:3; ">
         <img style=" width:100%; height:100%;padding:40px"
             src="https://images.prismic.io/axerve/9fddf851-bee8-41d9-a366-7fb7493ee07a_Foto%20Ecommerce%20-%20Blog.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max"
@@ -63,7 +63,7 @@
                     <div><span class="text-danger">{{ $message }}</span></div>
                 @enderror
             </div>
-            <button style="background-color: #389147; font-weight:bold" type="submit" class="btn btn-success"
+            <button style="background-color: #2414da; font-weight:bold" type="submit" class="btn btn-success"
                 wire:click.prevent="store">Inserisci</button>
         </form>
     </div>

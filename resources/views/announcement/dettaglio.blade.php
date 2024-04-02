@@ -8,7 +8,7 @@
     </div>
     <div style="align-items:center; justify-content:center" class="row m-2  d-flex  text-center">
      
-        <div  class="card m-4 col-12 col-md-6"style="width: 40rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
+        <div  class="card m-4 col-12 col-md-6"style="width: 40rem; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
             <div class="card-body">
                 <div style="padding: 12px" id="carouselExampleIndicators" class="carousel slide">
                     <div class="carousel-indicators">
@@ -39,8 +39,8 @@
                 <h3 class="card-title text-center">{{$announcement->title}}</h3>
                 <h5 class="card-title text-center">{{$announcement->body}}</h5>
                 <p class="card-text">{{$announcement->price}} €</p>
-                <p class="card-text"><a style="text-decoration: none; color:white" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria : {{$announcement->category->name}}</a></p>
-                <p style="color: white; background-color:#0f551b" class="card-footer">Pubblicato il:
+                <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria : {{$announcement->category->name}}</a></p>
+                <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
                   {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
                   {{ $announcement->user->name ?? '' }}</p>
                 

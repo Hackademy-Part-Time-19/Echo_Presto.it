@@ -31,7 +31,7 @@
 
     <section id="SezioneCategorie">
         <div>
-            <h1 style=" color:white; font-size:70px">..Scegli tra le migliori categorie</p>
+            <h1 style=" font-size:70px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1);">..Scegli tra le migliori categorie</p>
             </h1>
         </div>
         <div class="container" id="prod">
@@ -45,7 +45,7 @@
                 <a href="{{ route('categoryShow', 9) }}">
                 <img
                   class="carosell" src="Images/Abbigliamento/abbigliamentoCarosello.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                   </a>
               </div>
               <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
@@ -55,7 +55,7 @@
                 <a href="{{ route('categoryShow', 1) }}">
                 <img
                 class="carosell" src="Images/Laptop/laptop.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
               <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
@@ -65,7 +65,7 @@
                 <a href="{{ route('categoryShow', 8) }}">
                 <img
                 class="carosell" src="Images/Telefonia/iphone.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
               <div class="col-12 col-sm-12 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
@@ -75,20 +75,20 @@
                 <a href="{{ route('categoryShow', 2) }}">
                 <img
                 class="carosell" src="Images/Arredamento casa/Mobili casa/mobili1.jpg"
-                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover;filter:brightness(0.8); border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                  alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
 
             </div>
 
     </section>
-    <section id="sectionCard" style= "min-height:110vh; background-color:#1C6F29; padding:100px">
-        <h2 class="text-center" style="font-size: 50px; color:white; font-weight:bold; margin-bottom:30px">Annunci più
+    <section id="sectionCard" style= "min-height:110vh;   background-color: #fffff2;  padding:100px">
+        <h2 class="text-center" style="font-size: 50px;font-weight:bold; margin-bottom:30px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1)">Annunci più
             recenti:</h2>
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
 
-                <div class="card m-4 col-12 col-md-6" style="width: 24rem; background-color:rgb(153, 185, 152); box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
+                <div class="card m-4 col-12 col-md-6" style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; ">
 
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400"
@@ -96,16 +96,16 @@
                         <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
-                        <p class="card-text"><a style="text-decoration: none; color:white" href=""> Categoria
+                        <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria
                                 :
                                 {{ $announcement->category->name }}</a></p>
-                        <p style="color: white; background-color:#0f551b" class="card-footer">Pubblicato il:
+                        <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
                             {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
                             {{ $announcement->user->name ?? '' }}</p>
                         <div style="display: flex; align-items:center; justify-content:end">
                             <a href="" class="card-link ">
                                 <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
-                                    <button style="background: #202020; width:150px" type="submit"
+                                    <button style="background: #2414da; width:150px" type="submit"
                                         class="btn btn-secondary">More</button>
                                 </a>
                             </a>

@@ -6,7 +6,7 @@ use App\Http\Controllers\WorkController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
-
+use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,3 +46,8 @@ Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])
 
 Route::get('/work', [WorkController::class, 'showWorkPage'])->name('work');
 Route::get('/work/redirect', [WorkController::class, 'redirectHome'])->name('work.redirect');
+
+//gestione profilo
+Route::get('/user/profile/{user}', [ProfileController::class, 'show'])->name('profile');
+Route::get('/user/profile/info', [ProfileController::class, 'info'])->name('info');
+Route::get('/user/profile/update', [ProfileController::class, 'create'])->name('profile.update');

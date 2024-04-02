@@ -11,7 +11,7 @@
                 <div class="footer-content-column">
                     <div class="footer-logo">
                         <a class="footer-logo-link"href="{{ route('home') }}">
-                            <img src="{{ asset('Images/LogoPresto4.png') }}" style="width:100px;height:100px;">
+                            <img src="{{ asset('Images/LogoPrestoFooter.png') }}" style="width:100px;height:100px;">
                         </a>
                     </div>
 
@@ -22,18 +22,18 @@
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
                                     <a class="styleAfooter"
-                                        href="https://www.linkedin.com/in/vincenzo-tito-junior-developer/">Vincenzo
+                                        href="https://www.linkedin.com/in/vincenzo-tito-junior-developer/" target="blank">Vincenzo
                                         Tito</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
+                                    <a class="styleAfooter" href="https://www.linkedin.com/in/maicol-angelicchio-042579206/" target="blank">Maicol Angelicchio</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="www.linkedin.com/in/ivan-di-domenicodeveloper">Ivan Di
+                                    <a class="styleAfooter" href="https://www.linkedin.com/in/ivan-di-domenicodeveloper/" target="blank">Ivan Di
                                         Domenico</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Diego Lombardi</a>
+                                    <a class="styleAfooter" href="#" target="blank">Diego Lombardi</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,10 +42,10 @@
                             <h2 class="footer-menu-name">CONTATTI</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
-                                    <P>vincenzotito@icloud.com</P>
+                                    <p>vincenzotito@icloud.com</p>
                                 </li>
                                 <li>
-                                    <p>maicolangelicchio@gmail.com</p>
+                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
                                 </li>
                                 <li>
                                     <p>ivanlajoya10@gmail.com</p>
@@ -55,12 +55,13 @@
                                 </li>
                             </ul>
                         </div>
-
+                        @if (Auth::check() && (Auth::user()->is_revisor === 0 ))
                         <div class="footer-menu" style="flex:3;display:flex;flex-direction:column;align-items:center;">
                             <h2 class="footer-menu-name">Lavora con noi</h2>
                             <P>Registrati e clicca qui:</P>
-                            <button class="btn btn-success"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>        
+                            <button class="btn btn-success" style="background-color: #6CA7DD"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>
                         </div>
+                        @endif
 
                     </div>
 
