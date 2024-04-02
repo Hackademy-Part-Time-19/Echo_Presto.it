@@ -52,7 +52,7 @@
             <button style="background-color: #2414da;  border-radius:15px;"> <a style="color:white;" class="nav-link " href="{{ route('register') }}">Registrati</a></button>
             @endguest
             @auth
-            <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active" aria-current="page" href="{{ route('profile', auth()->user()->id)}}">Benvenuto
+            <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active" aria-current="page" href="{{ route('user.profile', auth()->user()->id)}}">Benvenuto
                 {{ auth()->user()->name }}</a>
             @if (Auth::check() && (Auth::user()->is_revisor === 0 ))
             <a href="{{route('work')}}"><button style="width: max-content; margin-top:4px" id="btnWork" class="btn btn-success">Lavora con noi</button> </a>
