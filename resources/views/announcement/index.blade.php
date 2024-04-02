@@ -32,7 +32,8 @@
         @empty
              <div class="col-12">
              <div class="alert alert-warning py-3 shadow">
-              <p class="lead">Non ci sono annunci per questa ricerca</p>
+              <p class="lead">Non è presente nessun annuncio</p>
+              <p>Se vuoi pubblicarne uno clicca qui: <a href="{{route('create')}}" style="color: #2414da">Pubblica</a></p>
            </div>
         </div>
  @endforelse

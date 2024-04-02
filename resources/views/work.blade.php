@@ -1,6 +1,6 @@
 <x-layout>
 
-    <div style="display:flex; align-items:center;justify-content:center; background-color:#6CA7DD;"
+    <div style="display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px"
     class="container mt-5">
     <div style="flex:5; ">
         <img style=" width:100%; height:100%;padding:40px"

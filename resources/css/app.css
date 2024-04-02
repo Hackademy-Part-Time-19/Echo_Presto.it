@@ -39,6 +39,7 @@
 #Navbar{
     background-color:#6CA7DD !important; 
     color:white !important;
+   
     
 }
 
@@ -138,8 +139,8 @@
   .styleAfooter {
     background-image: linear-gradient(
       to right,
-      #89f059,
-      #18e20e 50%,
+      #59c5f0,
+      #ffffff 50%,
       #f0eaea 50%
     );
     background-size: 200% 100%;

@@ -10,7 +10,7 @@
       
 </head>
 
-<body style="background-color: #fffff2">
+<body style="background-color: #fffff2;">
     <x-navbar />
     <div style="min-height: 70vh;">
         {{ $slot }}

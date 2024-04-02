@@ -22,18 +22,18 @@
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
                                     <a class="styleAfooter"
-                                        href="https://www.linkedin.com/in/vincenzo-tito-junior-developer/">Vincenzo
+                                        href="https://www.linkedin.com/in/vincenzo-tito-junior-developer/" target="blank">Vincenzo
                                         Tito</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
+                                    <a class="styleAfooter" href="https://www.linkedin.com/in/maicol-angelicchio-042579206/" target="blank">Maicol Angelicchio</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="www.linkedin.com/in/ivan-di-domenicodeveloper">Ivan Di
+                                    <a class="styleAfooter" href="https://www.linkedin.com/in/ivan-di-domenicodeveloper/" target="blank">Ivan Di
                                         Domenico</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Diego Lombardi</a>
+                                    <a class="styleAfooter" href="#" target="blank">Diego Lombardi</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,16 +42,16 @@
                             <h2 class="footer-menu-name">CONTATTI</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
-                                    <P>vincenzotito@icloud.com</P>
+                                    <p>vincenzotito@icloud.com</p>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
+                                    <p>maicol.angelicchio.91@gmail.com</p>
                                 </li>
                                 <li>
                                     <p>ivanlajoya10@gmail.com</p>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Diego Lombardi</a>
+                                    <p>diegolombardi199@gmail.com</p>
                                 </li>
                             </ul>
                         </div>
