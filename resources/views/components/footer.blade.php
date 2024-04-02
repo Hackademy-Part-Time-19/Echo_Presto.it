@@ -45,7 +45,7 @@
                                     <p>vincenzotito@icloud.com</p>
                                 </li>
                                 <li>
-                                    <p>maicol.angelicchio.91@gmail.com</p>
+                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
                                 </li>
                                 <li>
                                     <p>ivanlajoya10@gmail.com</p>
