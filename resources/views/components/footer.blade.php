@@ -45,13 +45,13 @@
                                     <P>vincenzotito@icloud.com</P>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Maicol Angelicchio</a>
+                                    <p>maicolangelicchio@gmail.com</p>
                                 </li>
                                 <li>
                                     <p>ivanlajoya10@gmail.com</p>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#">Diego Lombardi</a>
+                                    <p>diegolombardi199@gmail.com</p>
                                 </li>
                             </ul>
                         </div>

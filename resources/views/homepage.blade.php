@@ -11,7 +11,7 @@
     @endif
     <header id="HeaderHomepage">
         <div>
-            <h1 id="Slogan">..IL TUO ACQUISTO AD UN CLICK DI DISTANZA...</h1>
+            <h1 id="Slogan" >..IL TUO ACQUISTO AD UN CLICK DI DISTANZA...</h1>
         </div>
         <div id="SezioneRicerca">
             <div class="container-fluid">

@@ -64,10 +64,10 @@
 #Slogan{
     color:rgb(255, 255, 255); 
     font-size:60px;
-    font-weight: bold;
-    font-style: italic;
-    text-shadow: 10px 6px 4px rgba(0, 0, 0, 0.9);
-    -webkit-text-stroke: #030604 0.9px;
+    font-weight: bolder;
+    font-style: Italic;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1),
+                 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 #SezioneRicerca{
