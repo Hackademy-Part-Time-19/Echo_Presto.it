@@ -72,6 +72,9 @@ class ProfileController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user_id=Profile::where('id', $id)->value('user_id');
+        DB::table('profiles')->where('user_id', $user_id)->delete();
+        DB::table('users')->where('id', $user_id)->delete();
+        return redirect()->route('home');
     }
 }
