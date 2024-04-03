@@ -22,7 +22,7 @@ class ProfileController extends Controller
      */
     public function create(Request $request, $id)
     {
-        $profile = Profile::where('user_id', $id)->first();
+        $profile = Profile::where('id', $id)->first();
         return view('user.update', compact('profile'));
     }
 
