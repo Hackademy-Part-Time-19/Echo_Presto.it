@@ -49,4 +49,5 @@ Route::get('/work/redirect', [WorkController::class, 'redirectHome'])->name('wor
 
 //gestione profilo
 Route::get('/user/profile/{user}', [ProfileController::class, 'show'])->name('user.profile');
-Route::get('/user/update', [ProfileController::class, 'create'])->name('user.update');
+Route::get('/user/update/{profile}', [ProfileController::class, 'create'])->name('user.update');
+Route::post('/user/update/{id}', [ProfileController::class, 'update'])->name('user.update');
