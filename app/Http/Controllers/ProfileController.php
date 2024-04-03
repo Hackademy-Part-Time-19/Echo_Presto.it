@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Profile;
 
 class ProfileController extends Controller
 {
@@ -20,7 +21,7 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('profile_update');
+        return view('user.update');
     }
 
     /**
@@ -36,7 +37,7 @@ class ProfileController extends Controller
      */
     public function show(string $id)
     {
-        $profile=DB::table('profiles')->where('user_id', $id)->first();
+        $profile = Profile::where('user_id', $id)->first();
         return view('user.profile', compact('profile'));
     }
 
@@ -62,8 +63,5 @@ class ProfileController extends Controller
     public function destroy(string $id)
     {
         //
-    }
-    public function info(){
-        return view('user.info');
     }
 }
