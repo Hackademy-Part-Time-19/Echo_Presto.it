@@ -16,17 +16,31 @@
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
                       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     </div>
+                    @if ($announcement->images)
                     <div class="carousel-inner">
-                      <div class="carousel-item active">
-                        <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                      </div>
-                      <div class="carousel-item">
-                        <img src="https://picsum.photos/900/500" class="d-block w-100" alt="...">
-                      </div>
+                        @foreach ($announcement->images as $image)
+                            <div class="carousel-item @if ($loop->first) active @endif">
+                                <img src="{{ Storage::url($image->path) }}"
+                                    class="img-fluid p-3 rounded" alt="">
+                            </div>
+                        @endforeach
                     </div>
+                @else
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded"
+                                alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded"
+                                alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded"
+                                alt="">
+                        </div>
+                    </div>
+                @endif
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                       <span class="visually-hidden">Previous</span>
