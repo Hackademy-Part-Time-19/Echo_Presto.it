@@ -38,7 +38,7 @@
 
 
             <div class="row" style="margin-top:20px;">
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold;">ABBIGLIAMENTO</h5>
                 </div>
@@ -48,7 +48,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                   </a>
               </div>
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">LAPTOP</h5>
                 </div>
@@ -58,7 +58,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">SMARTPHONES</h5>
                 </div>
@@ -68,7 +68,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
-              <div class="col-12 col-sm-12 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+              <div class="col-12 col-sm-12 col-md-3" style="height: 70vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">CASA</h5>
                 </div>

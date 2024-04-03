@@ -12,12 +12,42 @@
         <div class="container">
             <div class="row">
                 <div style="display:flex; align-items:center; justify-content:center;"" class="col-12 d-flex">
-                    <div class="card m-4 col-12 col-md-6 row m-2  d-flex  text-center"
-                        style="width: 50rem; ">
+                    <div class="card m-4 col-12 col-md-6 row m-2  d-flex  text-center" style="width: 50rem; ">
                         <div class="card-body">
-                            <img style="border-radius:5px;" class="img-fluid"
-                                src="https://picsum.photos/500/400" class="d-block w-100"
-                                alt="immagine">
+                            <div id="showCarousel" class="carousel slide" data-bs-slide="carousel">
+                                @if ($announcement_to_check->images)
+                                <div class="carousel-inner">
+                                    @foreach($announcement_to_check->images as $image)
+                                    <div class="carousel-item @if($loop->first) active @endif">
+                                    <img src="{{Storage::url($image->path)}}" class="img-fluid p-3 rounded" alt="">
+                                    </div>
+                                    @endforeach
+                                </div>
+                                @else
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded" alt="">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="https://picsum.photos/500/400" class="img-fluid p-3 rounded" alt="">
+                                    </div>
+                                </div>
+                                @endif
+                                <button class="carousel-control-prev" type="button" data-bs-target="#shoeCarousel"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#shoeCarousel"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            
                             <h3 class="card-title text-center">{{ $announcement_to_check->title }}</h3>
                             <h5 class="card-title text-center">{{ $announcement_to_check->body }}</h5>
                             <p class="card-text">{{ $announcement_to_check->price }} €</p>
