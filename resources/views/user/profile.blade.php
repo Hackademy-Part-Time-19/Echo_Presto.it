@@ -32,6 +32,6 @@
             @endif
         </li>
         <a href="{{ route('user.update',['id' => $profile->id] )}}" class="btn btn-info" style="margin-top:20px;background-color: rgb(37, 37, 223); font-weight:bold; border:solid 1px darkblue; color:white; margin: 1%; width:15vw">Modifica Profilo</a>
-        <a href="{{ route('user.delete',['id' => $profile->id] )}}" class="btn btn-danger" style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white; margin: 1%; width:15vw">Elimina account</a>
+        <a href="{{ route('user.delete',['id' => $profile->id] )}}" class="btn btn-danger" style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white; margin: 1%; width:15vw" onclick="return confirm('Sei sicuro di voler eliminare questo account?')">Elimina account</a>
     </ul>
 </x-layout>
