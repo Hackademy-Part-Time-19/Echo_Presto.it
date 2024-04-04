@@ -10,7 +10,13 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+<<<<<<< HEAD
+        "@popperjs/core": "^2.11.8",
+        "bootstrap": "^5.3.3",
+        "install": "^0.13.0"
+=======
         "bootstrap": "^5.3.3"
        
+>>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
     }
 }

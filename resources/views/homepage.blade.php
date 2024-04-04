@@ -11,7 +11,7 @@
     @endif
     <header id="HeaderHomepage">
         <div>
-            <h1 id="Slogan" >..IL TUO ACQUISTO AD UN CLICK DI DISTANZA...</h1>
+            <h1 id="Slogan" >{{__('ui.welcome')}}</h1>
         </div>
         <div id="SezioneRicerca">
             <div class="container-fluid">
@@ -31,7 +31,7 @@
 
     <section id="SezioneCategorie">
         <div>
-            <h1 style=" font-size:70px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1);">..Scegli tra le migliori categorie</p>
+            <h1 style=" font-size:70px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1);">{{__('ui.best')}}</p>
             </h1>
         </div>
         <div class="container" id="prod">
@@ -40,7 +40,7 @@
             <div class="row" style="margin-top:20px;">
               <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white; font-weight: bold;">ABBIGLIAMENTO</h5>
+                  <h5 style="color: white; font-weight: bold;">{{__('ui.clothes')}}</h5>
                 </div>
                 <a href="{{ route('categoryShow', 9) }}">
                 <img
@@ -70,7 +70,7 @@
               </div>
               <div class="col-12 col-sm-12 col-md-3" style="height: 70vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
-                  <h5 style="color: white; font-weight: bold">CASA</h5>
+                  <h5 style="color: white; font-weight: bold">{{__('ui.catHome')}}</h5>
                 </div>
                 <a href="{{ route('categoryShow', 2) }}">
                 <img
@@ -83,8 +83,7 @@
 
     </section>
     <section id="sectionCard" style= "min-height:110vh;   background-color: #fffff2;  padding:100px">
-        <h2 class="text-center" style="font-size: 50px;font-weight:bold; margin-bottom:30px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1)">Annunci più
-            recenti:</h2>
+        <h2 class="text-center" style="font-size: 50px;font-weight:bold; margin-bottom:30px; text-shadow: 4px 4px 6px rgba(63, 71, 121, 1)">{{__('ui.allAnnouncements')}}</h2>
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
 
@@ -96,12 +95,17 @@
                         <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
-                        <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria
-                                :
+                        <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:
                                 {{ $announcement->category->name }}</a></p>
+<<<<<<< HEAD
+                        <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
+                            {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
+                            {{ $announcement->user->name ?? '' }}</p>
+=======
                         <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
                             {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
                                 {{ $announcement->user->name ?? '' }}</p>
+>>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
                         <div style="display: flex; align-items:center; justify-content:end">
                             <a href="" class="card-link ">
                                 <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">

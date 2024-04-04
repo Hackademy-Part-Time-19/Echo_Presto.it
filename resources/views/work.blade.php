@@ -9,10 +9,10 @@
     <div class="row justify-content-center mt-3 " style="flex:6;padding:40px; width:100%">
         <form style="color: white;" action="{{ route('register') }}" method="POST">
             @csrf
-            <h2>Richiesta per diventare Revisore</h2>
+            <h2>{{__('ui.request')}}</h2>
             <div class="form-row ">
                 <div class="form-group col-md-9">
-                    <label for="name">Nome</label>
+                    <label for="name">{{__('ui.name')}}</label>
                     <input type="text" class="form-control " id="name" placeholder="Nome" name="name">
                 </div>
             </div>
@@ -21,14 +21,14 @@
             @enderror
             <div class="form-row">
                 <div class="form-group col-md-9">
-                    <label for="inputEmail4">Email</label>
+                    <label for="inputEmail4">{{__('ui.email')}}</label>
                     <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                 </div>
                 @error('email')
                 <span class=" small text-danger">{{ $message }}</span>
                 @enderror
             </div>
-            <a href="{{route('work.redirect')}}" class="btn btn-success" style="margin-top:20px; background-color:#2414da">Diventa Revisore</a>
+            <a href="{{route('work.redirect')}}" class="btn btn-success" style="margin-top:20px; background-color:#2414da">{{__('ui.us2')}}</a>
         </form>
 
 

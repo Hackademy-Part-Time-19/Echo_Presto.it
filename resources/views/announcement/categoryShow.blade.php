@@ -2,7 +2,7 @@
     <div style="background-color: #151515" class="container-fluid p-5  shadow mb-4">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center text-white">Elenco Annunci Categoria {{ $category->name }}</h1>
+                <h1 class="text-center text-white">{{__('ui.categoryAdd')}} {{ $category->name }}</h1>
             </div>
         </div>
     </div>
@@ -22,9 +22,9 @@
                                 <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                                 <p class="card-text">{{ $announcement->price }} €</p>
                                 <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}">
-                                        Categoria : {{ $announcement->category->name }}</a></p>
-                                <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
-                                    {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
+                                    {{__('ui.category')}} : {{ $announcement->category->name }}</a></p>
+                                <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
+                                    {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
                                     {{ $announcement->user->name ?? '' }}</p>
                                 <div style="display: flex; align-items:center; justify-content:end">
                                     <a href="" class="card-link ">                
@@ -39,8 +39,8 @@
                     @empty
                         <div class="col-12">
                             <div class="alert alert-warning py-3 shadow">
-                                <p class="lead">Non ci sono annunci per questa ricerca</p>
-                                <p>Clicca qui per crearne uno: <a style="color: #2414da" href="{{route('create')}}">Pubblica</a></p>
+                                <p class="lead">{{__('ui.noAdd')}}</p>
+                                <p>{{__('ui.newAdd')}}: <a style="color: #2414da" href="{{route('create')}}">{{__('ui.pubb')}}</a></p>
                             </div>
                         </div>
                     @endforelse
