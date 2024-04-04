@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Announcement;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Profile;
@@ -40,6 +41,7 @@ class ProfileController extends Controller
     public function show(string $id)
     {
         $profile = Profile::where('user_id', $id)->first();
+        $profile->advertisements_placed=Announcement::where('user_id', $id)->where('is_accepted', 1)->count();
         return view('user.profile', compact('profile'));
     }
 
