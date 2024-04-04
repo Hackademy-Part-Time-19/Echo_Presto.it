@@ -52,3 +52,5 @@ Route::get('/user/profile/{user}', [ProfileController::class, 'show'])->name('us
 Route::get('/user/update/{profile}', [ProfileController::class, 'create'])->name('user.update');
 Route::post('/user/update/{id}', [ProfileController::class, 'update'])->name('user.update');
 Route::get('/user/delete/{id}', [ProfileController::class, 'destroy'])->name('user.delete');
+
+Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revision'])->name('announcement.revision');
