@@ -31,7 +31,7 @@
                 {{ $profile->advertisements_placed  }}
             @endif
         </li>
-        <li style="margin: 1%;"><a href="{{ route('user.update',['id' => $profile->id] )}}" class="btn btn-info" style="margin-top:20px;background-color: rgb(37, 37, 223); font-weight:bold; border:solid 1px darkblue; color:white">Modifica Profilo</a></li>
-        <li style="margin: 1%;"><a href="{{ route('user.delete',['id' => $profile->id] )}}" class="btn btn-danger" style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white">Elimina account</a></li>
+        <a href="{{ route('user.update',['id' => $profile->id] )}}" class="btn btn-info" style="margin-top:20px;background-color: rgb(37, 37, 223); font-weight:bold; border:solid 1px darkblue; color:white; margin: 1%; width:15vw">Modifica Profilo</a>
+        <a href="{{ route('user.delete',['id' => $profile->id] )}}" class="btn btn-danger" style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white; margin: 1%; width:15vw">Elimina account</a>
     </ul>
 </x-layout>
