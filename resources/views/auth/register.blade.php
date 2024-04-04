@@ -8,10 +8,10 @@
         <div  style="flex:6.8;display:flex;flex-direction:column;background-color:#6CA7DD;border-top-right-radius:20px;border-bottom-right-radius:20px; padding:20px">
             <form style="color: white;" action="{{ route('register') }}" method="POST">
                 @csrf
-                <h2 style="font-weight: 600">Registrati</h2>
+                <h2 style="font-weight: 600">{{__('ui.reg')}}</h2>
                 <div class="form-row ">
                     <div class="form-group col-md-9   ">
-                        <label for="name">Il tuo nome</label>
+                        <label for="name">{{__('ui.name')}}</label>
                         <input type="text" class="form-control " id="name" placeholder="Nome" name="name">
                     </div>
                 </div>
@@ -20,7 +20,7 @@
                 @enderror
                 <div class="form-row">
                     <div class="form-group col-md-9">
-                        <label for="inputEmail4">La tua Email</label>
+                        <label for="inputEmail4">{{__('ui.email')}}</label>
                         <input type="email" class="form-control" id="email" placeholder="Email" name="email">
                     </div>
                     @error('email')
@@ -35,7 +35,7 @@
                     <span class=" small text-danger">{{ $message }}</span>
                 @enderror
                     <div class="form-group col-md-9">
-                        <label for="inputPassword4"> Conferma Password</label>
+                        <label for="inputPassword4"> {{__('ui.pass')}}</label>
                         <input type="password" class="form-control" id="password_confirmation"
                             placeholder="Conferma Password" name="password_confirmation">
                     </div>
@@ -44,7 +44,7 @@
                 @enderror
                 </div>
                 <button style="margin-top:20px;background-color: rgb(37, 37, 223); font-weight:bold;border:solid 1px darkblue" type="submit"
-                    class="btn btn-success">Registrati</button>
+                    class="btn btn-success">{{__('ui.reg')}}</button>
             </form>          
         </div>
 

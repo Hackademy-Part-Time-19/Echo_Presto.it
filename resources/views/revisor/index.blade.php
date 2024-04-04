@@ -3,8 +3,7 @@
         <div class="row">
             <div style="" class="col-12 text-light p-5">
                 <h1 class="text-center text-white">
-                    {{ $announcement_to_check ? 'Hai un annuncio da controllare' : 'Non ci sono annunci da controllare' }}
-                </h1>
+                    {{ $announcement_to_check ? __('ui.ads2') : __('ui.ads') }}
             </div>
         </div>
     </div>
@@ -22,9 +21,9 @@
                             <h5 class="card-title text-center">{{ $announcement_to_check->body }}</h5>
                             <p class="card-text">{{ $announcement_to_check->price }} €</p>
                             <p class="card-text"><a style="text-decoration: none; color:black;" href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}">
-                                    Categoria : {{ $announcement_to_check->category->name }}</a></p>
-                            <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
-                                {{ $announcement_to_check->created_at->format('d/m/Y') }} <br> Autore:
+                                {{__('ui.category')}} : {{ $announcement_to_check->category->name }}</a></p>
+                            <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
+                                {{ $announcement_to_check->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
                                 {{ $announcement_to_check->user->name ?? '' }}</p>
                             <div style="display: flex; align-items:center; justify-content:end">
                                 <a href="" class="card-link ">

@@ -2,7 +2,7 @@
     <div style="background-color: #151515" class="container-fluid p-5  shadow mb-4">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center text-white">Elenco Annunci</h1>
+                <h1 class="text-center text-white">{{__('ui.list')}}</h1>
             </div>
         </div>
     </div>
@@ -18,8 +18,8 @@
                     <h3 class="card-title text-center">{{ $announcement->title }}</h3>
                     <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                     <p class="card-text">{{ $announcement->price }} €</p>
-                    <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}""> Categoria : {{ $announcement->category->name }}</a></p>
-                    <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }} <br> Autore: {{ $announcement->user->name ?? '' }}</p>
+                    <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}} : {{ $announcement->category->name }}</a></p>
+                    <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}</p>
                     <div style="display: flex; align-items:center; justify-content:end">
                         <a href="" class="card-link ">
                             <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">

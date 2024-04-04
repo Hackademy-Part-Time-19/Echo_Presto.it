@@ -18,7 +18,7 @@
                     <div style="display: flex;flex-direction:row;width:1300px;justify-content:center;align-items:center">
 
                         <div class="footer-menu" style="flex:3;align-items:center;">
-                            <h2 class="footer-menu-name">TEAM DI SVILUPPO</h2>
+                            <h2 class="footer-menu-name">{{__('ui.dev')}}</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
                                     <a class="styleAfooter"
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="footer-menu" style="flex:8;display:flex;flex-direction:column;align-items:center;">
-                            <h2 class="footer-menu-name">CONTATTI</h2>
+                            <h2 class="footer-menu-name">{{__('ui.cont')}}</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
                                     <p>vincenzotito@icloud.com</p>
@@ -57,9 +57,9 @@
                         </div>
                         @if (Auth::check() && (Auth::user()->is_revisor === 0 ))
                         <div class="footer-menu" style="flex:3;display:flex;flex-direction:column;align-items:center;">
-                            <h2 class="footer-menu-name">Lavora con noi</h2>
-                            <P>Registrati e clicca qui:</P>
-                            <button class="btn btn-success" style="background-color: #6CA7DD"><a href="{{route("work")}}">DIVENTA REVISORE</a></button>
+                            <h2 class="footer-menu-name">{{__('ui.work')}}</h2>
+                            <P>{{__('ui.with')}}:</P>
+                            <button class="btn btn-success" style="background-color: #6CA7DD"><a href="{{route("work")}}">{{__('ui.us')}}</a></button>
                         </div>
                         @endif
 

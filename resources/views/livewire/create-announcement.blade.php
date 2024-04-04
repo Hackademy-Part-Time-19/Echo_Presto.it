@@ -6,7 +6,7 @@
             alt="">
     </div>
     <div style="flex:3;padding:40px">
-        <h1 style="color: white" class="mb-4">Crea il tuo Annuncio </h1>
+        <h1 style="color: white" class="mb-4">{{__('ui.create')}}</h1>
 
         @if (session()->has('message'))
             <div class="alert alert-success flex flex-row justify-center my-2">
@@ -21,7 +21,7 @@
         <form style="color: white;text-shadow:2px 2px 2px black;" wire.submit.prevent='store'>
             @csrf
             <div class="mb-3">
-                <label for="title" class="form-label">Titolo Annuncio</label>
+                <label for="title" class="form-label">{{__('ui.title')}}</label>
                 <input wire:model.live='title' type="text" class="form-control" id="title"
                     aria-describedby="emailHelp" name="title">
                 @error('title')
@@ -29,23 +29,23 @@
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="body" class="form-label">Descrizione</label>
+                <label for="body" class="form-label">{{__('ui.desc')}}</label>
                 <input wire:model.live='body' type="text" class="form-control" id="body" name="body">
                 @error('body')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="price" class="form-label">Prezzo</label>
+                <label for="price" class="form-label">{{__('ui.price')}}</label>
                 <input wire:model.live='price' type="number" class="form-control" id="price" name="price">
                 @error('price')
                     <span class="text-danger">{{ $message }}</span>
                 @enderror
             </div>
             <div class="mb-3">
-                <label for="category" class="form-label">Categoria</label>
+                <label for="category" class="form-label">{{__('ui.category')}}</label>
                 <select wire:model.defer='category' class="form-select" id="category" name="category">
-                    <option value="">Scegli la categoria</option>
+                    <option value="">{{__('ui.choose')}}</option>
                     @foreach ($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->name }}</option>
                     @endforeach
@@ -64,7 +64,7 @@
                 @enderror
             </div>
             <button style="background-color: #2414da; font-weight:bold" type="submit" class="btn btn-success"
-                wire:click.prevent="store">Inserisci</button>
+                wire:click.prevent="store">{{__('ui.insert2')}}</button>
         </form>
     </div>
 </div>
