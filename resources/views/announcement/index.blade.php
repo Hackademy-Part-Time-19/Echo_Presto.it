@@ -12,9 +12,9 @@
                 <div class="row">
                     <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
                         @forelse ($announcements as $announcement)
-                            <div class="card m-4 col-12 col-md-6"style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; " ">
+                            <div class="card m-4 col-12 col-md-6"style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
                     <div class="card-body">
-                    <img style="border-radius:5px; " class="img-fluid" src="https://picsum.photos/400/400" alt="immagine">
+                    <img style="border-radius:5px; " class="img-fluid" src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}} alt="immagine">
                     <h3 class="card-title text-center">{{ $announcement->title }}</h3>
                     <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                     <p class="card-text">{{ $announcement->price }} €</p>
@@ -22,6 +22,11 @@
                     <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}</p>
                     <div style="display: flex; align-items:center; justify-content:end">
                         <a href="" class="card-link ">
+                        @if(Auth::check() && Auth::user()->is_revisor == 1)
+                        <a href="{{ route('announcement.revision', $announcement->id)}}" class="card-link ">
+                                <button style="width:150px" type="submit" class="btn btn-danger">Revisiona</button>
+                            </a>
+                        @endif
                             <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                 <button style="background: #2414da; width:150px" type="submit" class="btn btn-secondary">More</button>
                             </a>

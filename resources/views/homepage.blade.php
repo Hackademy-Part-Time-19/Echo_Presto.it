@@ -38,7 +38,7 @@
 
 
             <div class="row" style="margin-top:20px;">
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold;">{{__('ui.clothes')}}</h5>
                 </div>
@@ -48,7 +48,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                   </a>
               </div>
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">LAPTOP</h5>
                 </div>
@@ -58,7 +58,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
-              <div class="col-12 col-sm-4 col-md-3" style="height: 100vh;position: relative;">
+              <div class="col-12 col-sm-4 col-md-3" style="height: 70vh;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">SMARTPHONES</h5>
                 </div>
@@ -68,7 +68,7 @@
                   alt="" style="width: 100%;height: 100%;object-fit: cover; border: 7px solid white;border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 1.5);">
                 </a>
               </div>
-              <div class="col-12 col-sm-12 col-md-3" style="height: 100vh;padding: 0px;position: relative;">
+              <div class="col-12 col-sm-12 col-md-3" style="height: 70vh;padding: 0px;position: relative;">
                 <div style="position: absolute;top:80px; left:40px;z-index: 1000">
                   <h5 style="color: white; font-weight: bold">{{__('ui.catHome')}}</h5>
                 </div>
@@ -90,16 +90,22 @@
                 <div class="card m-4 col-12 col-md-6" style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; ">
 
                     <div class="card-body">
-                        <img style="border-radius:5px;" class="img-fluid" src="https://picsum.photos/400/400"
+                        <img style="border-radius:5px;" class="img-fluid" src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}}
                             alt="immagine">
                         <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:
                                 {{ $announcement->category->name }}</a></p>
+<<<<<<< HEAD
                         <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
                             {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
                             {{ $announcement->user->name ?? '' }}</p>
+=======
+                        <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
+                            {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
+                                {{ $announcement->user->name ?? '' }}</p>
+>>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
                         <div style="display: flex; align-items:center; justify-content:end">
                             <a href="" class="card-link ">
                                 <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">

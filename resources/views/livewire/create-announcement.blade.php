@@ -1,5 +1,5 @@
-<div
-    style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px">
+<div>
+    <div style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px">
     <div style="flex:3; ">
         <img style=" width:100%; height:100%;padding:40px"
             src="https://images.prismic.io/axerve/9fddf851-bee8-41d9-a366-7fb7493ee07a_Foto%20Ecommerce%20-%20Blog.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max"
@@ -56,15 +56,44 @@
             </div>
             <div class="mb-3">
                 <label style="color:white; text-shadow:2px 2px 2px black;" for="image"
-                    class="form-label">Image</label>
-                <input type="file" name="image" class="form-control" id="image"
-                    value="{{ old('description') }}">
-                @error('image')
+                    class="form-label">Immagini</label>
+                <input wire:model='temporary_images' type="file" name="images" multiple class="form-control"
+                    id="images">
+                @error('temporary_images.*')
                     <div><span class="text-danger">{{ $message }}</span></div>
                 @enderror
             </div>
+<<<<<<< HEAD
             <button style="background-color: #2414da; font-weight:bold" type="submit" class="btn btn-success"
                 wire:click.prevent="store">{{__('ui.insert2')}}</button>
+=======
+           
+            <button style="background-color: #2414da; font-weight:bold; margin-top:10px" type="submit"
+                class="btn btn-success" wire:click.prevent="store">Inserisci</button>
+>>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
         </form>
+        
     </div>
+</div>
+<div style="background-color:#6CA7DD; border-radius:20px; margin-top:20px;">
+    @if (!empty($images))
+        <div class="row">
+            <div class="col-12">
+                <p class="m-3" style="color:white; text-shadow:2px 2px 2px black;">Preview:</p>
+                <div class="row m-3">
+                    @foreach ($images as $key => $image)
+                        <div class="col">
+                            <div class="img-preview mx-auto "
+                                style="background-image: url({{ $image->temporaryUrl() }});height:400px; width:400px; object-fit:cover;">
+                            </div>
+                            <button type="button"
+                                class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                wire:click.prevent='removeImage({{ $key }})'>Cancella</button>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+</div>
 </div>

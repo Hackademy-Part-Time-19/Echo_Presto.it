@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\Profile;
+use Illuminate\View\ViewName;
 
 class ProfileController extends Controller
 {
@@ -19,9 +20,10 @@ class ProfileController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request, $id)
     {
-        return view('user.update');
+        $profile = Profile::where('id', $id)->first();
+        return view('user.update', compact('profile'));
     }
 
     /**
@@ -29,7 +31,7 @@ class ProfileController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
     }
 
     /**
@@ -54,7 +56,15 @@ class ProfileController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Profile::where('id', $id)->update([
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'city' => $request->city,
+            'address' => $request->address,
+            'description' => $request->description
+        ]);
+        $user_id=Profile::where('id', $id)->value('user_id');
+        return redirect()->route('user.profile',['user' => $user_id]);
     }
 
     /**
@@ -62,6 +72,9 @@ class ProfileController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $user_id=Profile::where('id', $id)->value('user_id');
+        DB::table('profiles')->where('user_id', $user_id)->delete();
+        DB::table('users')->where('id', $user_id)->delete();
+        return redirect()->route('home');
     }
 }
