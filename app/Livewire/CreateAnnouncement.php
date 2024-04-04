@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Jobs\ResizeImage;
 use App\Models\Announcement;
-use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 
 class CreateAnnouncement extends Component
 {
@@ -64,12 +66,18 @@ class CreateAnnouncement extends Component
         $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
         if (count($this->images)) {
             foreach ($this->images as $image) {
-                $this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+                //$this->announcement->images()->create(['path' => $image->store('images', 'public')]);
+
+                $newFileName = "announcements/{$this->announcement->id}";
+                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
+
+                dispatch(new ResizeImage($newImage->path , 400, 400));
             }
+
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
+
             Auth::user()->announcements()->save($this->announcement);
         }
-
-
         session()->flash('message', 'Annuncio inserito con successo, sarà visibile dopo la revisione');
 
         $this->cleanForm();

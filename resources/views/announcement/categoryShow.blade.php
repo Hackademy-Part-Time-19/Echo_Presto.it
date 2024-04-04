@@ -16,7 +16,7 @@
                         style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
                             <div class="card-body">
                                 <img style="border-radius:5px; " class="img-fluid"
-                                    src={{!$announcement->images()->get()->isEmpty() ? Storage::url($announcement->images()->first()->path) : "https://picsum.photos/400/400"}}
+                                    src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}}
                                     alt="immagine">
                                 <h3 class="card-title text-center">{{ $announcement->title }}</h3>
                                 <h5 class="card-title text-center">{{ $announcement->body }}</h5>
@@ -27,7 +27,7 @@
                                     {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
                                     {{ $announcement->user->name ?? '' }}</p>
                                 <div style="display: flex; align-items:center; justify-content:end">
-                                    <a href="" class="card-link ">
+                                    <a href="" class="card-link ">                
                                         <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                             <button style="background: #2414da; width:150px" type="submit"
                                                 class="btn btn-secondary">More</button>

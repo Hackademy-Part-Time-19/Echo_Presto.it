@@ -20,7 +20,7 @@
                     <div class="carousel-inner">
                         @foreach ($announcement->images as $image)
                             <div class="carousel-item @if ($loop->first) active @endif">
-                                <img src="{{ Storage::url($image->path) }}"
+                                <img src="{{ $announcement->images()->first()->getUrl(400,400)}}"
                                     class="img-fluid p-3 rounded" alt="">
                             </div>
                         @endforeach
