@@ -22,6 +22,11 @@
                     <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }} <br> Autore: {{ $announcement->user->name ?? '' }}</p>
                     <div style="display: flex; align-items:center; justify-content:end">
                         <a href="" class="card-link ">
+                        @if(Auth::check() && Auth::user()->is_revisor == 1)
+                        <a href="{{ route('announcement.revision', $announcement->id)}}" class="card-link ">
+                                <button style="width:150px" type="submit" class="btn btn-danger">Revisiona</button>
+                            </a>
+                        @endif
                             <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                 <button style="background: #2414da; width:150px" type="submit" class="btn btn-secondary">More</button>
                             </a>

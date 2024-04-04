@@ -7,6 +7,7 @@ use App\Models\Category;
 use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 
@@ -63,7 +64,7 @@ class CreateAnnouncement extends Component
     public function store()
     {
         $this->validate();
-        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+        $announcement = Category::find($this->category)->announcements()->create($this->validate());
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 //$this->announcement->images()->create(['path' => $image->store('images', 'public')]);
@@ -78,8 +79,14 @@ class CreateAnnouncement extends Component
 
             Auth::user()->announcements()->save($this->announcement);
         }
-        session()->flash('message', 'Annuncio inserito con successo, sarà visibile dopo la revisione');
-
+        if(Auth::user()->is_revisor==1){
+            session()->flash('message', 'Annuncio inserito con successo');
+            DB::table('announcements')->update(['is_accepted' => 1]);
+        }
+        else{
+            session()->flash('message', 'Annuncio inserito con successo, sarà visibile dopo la revisione');
+        }
+        DB::table('announcements')->update(['user_id' => Auth::user()->id]);
         $this->cleanForm();
     }
 

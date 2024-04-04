@@ -41,7 +41,7 @@
                     style="margin-top:20px;background-color: rgb(37, 37, 223); font-weight:bold; border:solid 1px darkblue; color:white">Modifica
                     Profilo</a></li>
             <li style="margin: 1%; list-style:none"><a href="{{ route('user.delete', ['id' => $profile->id]) }}" class="btn btn-danger"
-                    style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white">Elimina account</a>
+                    style="margin-top:20px;font-weight:bold; border:solid 1px darkblue; color:white" onclick="return confirm('Sei sicuro di voler eliminare questo account?')">Elimina account</a>
             </li>
         </ul>
     </div>

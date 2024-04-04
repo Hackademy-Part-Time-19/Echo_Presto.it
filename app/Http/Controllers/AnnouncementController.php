@@ -36,7 +36,7 @@ class AnnouncementController extends Controller
      */
     public function store(Request $request)
     {
-        
+
     }
 
     /**
@@ -44,7 +44,7 @@ class AnnouncementController extends Controller
      */
     public function show(Announcement $announcement)
     {
-       
+
     }
 
     /**
@@ -69,5 +69,12 @@ class AnnouncementController extends Controller
     public function destroy(Announcement $announcement)
     {
         //
+    }
+
+    public function revision($id){
+        $announcement = Announcement::find($id);
+        $announcement->is_accepted = NULL;
+        $announcement->save();
+        return redirect()->back();
     }
 }
