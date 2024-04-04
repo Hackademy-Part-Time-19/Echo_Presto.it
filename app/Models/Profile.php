@@ -13,4 +13,8 @@ class Profile extends Model
     ];
     protected $table = 'profiles';
     public $timestamps = false;
+
+    
 }
+
+

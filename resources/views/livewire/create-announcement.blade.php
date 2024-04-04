@@ -1,5 +1,5 @@
-<div
-    style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px">
+<div>
+    <div style="min-height: 70vh; display:flex; align-items:center;justify-content:center; background-color:#6CA7DD; border-radius:20px">
     <div style="flex:3; ">
         <img style=" width:100%; height:100%;padding:40px"
             src="https://images.prismic.io/axerve/9fddf851-bee8-41d9-a366-7fb7493ee07a_Foto%20Ecommerce%20-%20Blog.jpg?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max"
@@ -63,25 +63,32 @@
                     <div><span class="text-danger">{{ $message }}</span></div>
                 @enderror
             </div>
-            @if (!empty($images))
-                <div class="row">
-                    <div class="col-12">
-                        <p>Preview:</p>
-                        <div class="row border border-4 border-info rounded shadow py-4">
-                            @foreach ($images as $key => $image)
-                                <div class="col my-3">
-                                    <div class="img-preview mx-auto shadow rounded" style="background-image: url({{ $image->temporaryUrl()}});height:300px; width:300px;  object-fit:cover;"></div>
-                                    <button type="button"
-                                        class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                        wire:click.prevent='removeImage({{ $key }})'>Cancella</button>
-                                </div>
-                            @endforeach
-                        </div>
-                    </div>
-                </div>
-            @endif
-            <button style="background-color: #2414da; font-weight:bold; margin-top:10px" type="submit" class="btn btn-success"
-                wire:click.prevent="store">Inserisci</button>
+           
+            <button style="background-color: #2414da; font-weight:bold; margin-top:10px" type="submit"
+                class="btn btn-success" wire:click.prevent="store">Inserisci</button>
         </form>
+        
     </div>
+</div>
+<div style="background-color:#6CA7DD; border-radius:20px; margin-top:20px;">
+    @if (!empty($images))
+        <div class="row">
+            <div class="col-12">
+                <p class="m-3" style="color:white; text-shadow:2px 2px 2px black;">Preview:</p>
+                <div class="row m-3">
+                    @foreach ($images as $key => $image)
+                        <div class="col">
+                            <div class="img-preview mx-auto "
+                                style="background-image: url({{ $image->temporaryUrl() }});height:400px; width:400px; object-fit:cover;">
+                            </div>
+                            <button type="button"
+                                class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
+                                wire:click.prevent='removeImage({{ $key }})'>Cancella</button>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    @endif
+</div>
 </div>
