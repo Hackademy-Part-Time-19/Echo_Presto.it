@@ -14,10 +14,7 @@
         "laravel/tinker": "^2.8",
         "livewire/livewire": "^3.4",
         "outhebox/blade-flags": "*",
-<<<<<<< HEAD
         "spatie/image": "2.2.7",
-=======
->>>>>>> 539d3e402c4fe7af904fde5f688c1935273a392f
         "teamtnt/laravel-scout-tntsearch-driver": "^14.0"
     },
     "require-dev": {
