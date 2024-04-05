@@ -24,7 +24,7 @@
                         <a href="" class="card-link ">
                         @if(Auth::check() && Auth::user()->is_revisor == 1)
                         <a href="{{ route('announcement.revision', $announcement->id)}}" class="card-link ">
-                                <button style="width:150px" type="submit" class="btn btn-danger">Revisiona</button>
+                                <button style="width:150px" type="submit" class="btn btn-danger">{{__('ui.rev2')}}</button>
                             </a>
                         @endif
                             <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">

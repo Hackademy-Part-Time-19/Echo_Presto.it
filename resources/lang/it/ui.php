@@ -10,6 +10,7 @@ return[
     'insert'=>'Inserisci Annuncio',
     'cat'=>'Categorie',
     'rev'=>'Zona Revisore',
+    'rev2'=>'Revisiona',
     'wel'=>'Benvenuto',
     'dev'=>'TEAM DI SVILUPPO',
     'cont'=>'CONTATTI',
@@ -36,5 +37,7 @@ return[
     'newAdd'=>'Clicca qui per crearne uno',
     'pubb'=>'Pubblica',
     'request'=>'Richiesta per diventare Revisore',
-    'us2'=>'Diventa un revisore'
+    'us2'=>'Diventa un revisore',
+    'more'=>'Dettagli',
+    'search'=>'Cerca',
 ];

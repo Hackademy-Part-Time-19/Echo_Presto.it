@@ -10,6 +10,7 @@ return[
     'insert'=>'Insert Ad',
     'cat'=>'Categories',
     'rev'=>'Reviewer Zone',
+    'rev2'=>'Revise',
     'wel'=>'Welcome',
     'dev'=>'DEVELOPMENT TEAM',
     'cont'=>'CONTACTS',
@@ -36,6 +37,8 @@ return[
     'newAdd'=>'Click here to make one',
     'pubb'=>'Post',
     'request'=>'Apply to become a Reviewer',
-    'us2'=>'Become a Reviewer'
+    'us2'=>'Become a Reviewer',
+    'more'=>'Show more',
+    'search'=>'Search',
 
 ];

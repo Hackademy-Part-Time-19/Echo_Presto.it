@@ -7,13 +7,14 @@
                     style="width: 50px; margin-right:1vw; margin-left:2vw;">
             </a>
             <a style="margin-left: 50px" class="nav-link active" aria-current="page"
-                href="{{ route('announcement.index') }}">{{__('ui.ann')}}</a>
+                href="{{ route('announcement.index') }}">{{ __('ui.ann') }}</a>
             @auth
                 <a style="margin-left: 50px" class="nav-link active" aria-current="page"
-                    href="{{ route('create') }}">{{__('ui.insert')}}</a>
+                    href="{{ route('create') }}">{{ __('ui.insert') }}</a>
 
                 <div class="btn-group" style="margin-left: 50px">
-                    <button style="background-color: #2414da; " type="button" class="btn btn-success">{{__('ui.cat')}}</button>
+                    <button style="background-color: #2414da; " type="button"
+                        class="btn btn-success">{{ __('ui.cat') }}</button>
                     <button style="background-color: #2414da; " type="button"
                         class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -34,7 +35,7 @@
                 @if (Auth::user()->is_revisor)
                     <li style="padding-left: 30px; display:flex; align-items:center; " class="nav-iem">
                         <a class="nav-link btn btn-outline btn-sm position-relative" href="{{ route('revisor.index') }}">
-                            {{__('ui.rev')}}
+                            {{ __('ui.rev') }}
                             <span style="margin: 12px"
                                 class="position-absolute top-20 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{ \App\Models\Announcement::ToBeRevisionedCount() }}</span>
@@ -53,41 +54,46 @@
         </button>
 
     </div>
-    <div style="margin-right: 50px" class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div style="margin-right: 60px" class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             @guest
-                <button style="background-color: #2414da;  border-radius:15px; margin-right:18px"> <a style="color:white;"
+                <button style="background-color: #2414da;  border-radius:15px; margin-right:20px"> <a style="color:white;"
                         class="nav-link " href="{{ route('login') }}">Login</a></button>
-                <button style="background-color: #2414da;  border-radius:15px;"> <a style="color:white;" class="nav-link "
-                        href="{{ route('register') }}">{{__('ui.reg')}}</a></button>
-                
+                <button style="background-color: #2414da;  border-radius:15px; margin-right:20px"> <a style="color:white;" class="nav-link "
+                        href="{{ route('register') }}">{{ __('ui.reg') }}</a></button>
+
             @endguest
             @auth
                 <a style="color: white; font-size:20px; width:max-content; margin-right:40px" class="nav-link active"
-                    aria-current="page" href="{{ route('user.profile', auth()->user()->id) }}">{{__('ui.wel')}}
+                    aria-current="page" href="{{ route('user.profile', auth()->user()->id) }}">{{ __('ui.wel') }}
                     {{ auth()->user()->name }}</a>
                 @if (Auth::check() && Auth::user()->is_revisor === 0)
                     <a href="{{ route('work') }}"><button style="width: max-content; margin-top:4px" id="btnWork"
-                            class="btn btn-success">{{__('ui.work')}}</button> </a>
+                            class="btn btn-success">{{ __('ui.work') }}</button> </a>
                 @endif
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button style="background-color: #2414da;  border-radius:15px; margin-right:18px; color:white"
+                    <button style="background-color: #2414da;  border-radius:15px; margin-right:20px; color:white"
                         type="submit" class="nav-link">Logout</button>
                 </form>
             @endauth
 
-            <div style="height: 20px;width:100px;display:flex;align-items:center;justify-content:center;flex-direction:row;margin-left:20px;">
+            <div
+                style="height: 20px;width:100px;display:flex;align-items:center;justify-content:center;flex-direction:row;margin-left:50px;">
                 <div style="align-items: center;height: 10px;width:40px;">
+                    <x-_locale lang="en" nation="gb" />
                     <img src="{{ asset('Images/ing.png') }}"style="height: 30px;width:40px;">
-                   <x-_locale lang="en" nation="gb" />
+
                 </div>
                 <div style="align-items: center;height: 10px;width:40px;margin-left:30px;">
+                    <x-_locale lang="it" nation="it" />
                     <img src="{{ asset('Images/ita.png') }}" style="height: 30px;width:40px;">
-                    <x-_locale lang="it" nation="it"/>
-                 </div>
-            </div>
-
+                </div>
+                <div style="align-items: center;height: 10px;width:40px;margin-left:30px;">
+                    <x-_locale lang="de" nation="de" />
+                    <img src="{{ asset('Images/de.jpg') }}" style="height: 30px;width:40px;">
+                </div>
+            </div> 
         </div>
     </div>
     </div>

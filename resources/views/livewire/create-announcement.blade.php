@@ -63,14 +63,8 @@
                     <div><span class="text-danger">{{ $message }}</span></div>
                 @enderror
             </div>
-<<<<<<< HEAD
             <button style="background-color: #2414da; font-weight:bold" type="submit" class="btn btn-success"
                 wire:click.prevent="store">{{__('ui.insert2')}}</button>
-=======
-           
-            <button style="background-color: #2414da; font-weight:bold; margin-top:10px" type="submit"
-                class="btn btn-success" wire:click.prevent="store">Inserisci</button>
->>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
         </form>
         
     </div>
