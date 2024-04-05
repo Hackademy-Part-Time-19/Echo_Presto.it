@@ -18,10 +18,10 @@
                 <div class="d-flex m-3" role="search">
                     <form style="margin-left: 30px;  width: 500px;" action="{{ route('announcements.search') }}"
                         method="GET" class="d-flex">
-                        <input style="width: 900px" class="form-control me-2" type="search" placeholder="Cerca"
+                        <input style="width: 900px" class="form-control me-2" type="search" placeholder="{{__('ui.search')}}"
                             aria-label="Search" name="searched">
                         <button style="background-color: #1a1919;  border-radius:15px;color:white; width:90px; border:black;"
-                            type="submit">Cerca</button>
+                            type="submit">{{__('ui.search')}}</button>
                     </form>
 
                 </div>
@@ -97,20 +97,12 @@
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:
                                 {{ $announcement->category->name }}</a></p>
-<<<<<<< HEAD
-                        <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
-                            {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
-                            {{ $announcement->user->name ?? '' }}</p>
-=======
-                        <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
-                            {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
-                                {{ $announcement->user->name ?? '' }}</p>
->>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
+                        <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}
                         <div style="display: flex; align-items:center; justify-content:end">
                             <a href="" class="card-link ">
                                 <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                     <button style="background: #2414da; width:150px" type="submit"
-                                        class="btn btn-secondary">More</button>
+                                        class="btn btn-secondary">{{__('ui.more')}}</button>
                                 </a>
                             </a>
                         </div>
