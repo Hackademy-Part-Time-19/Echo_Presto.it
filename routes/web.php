@@ -49,14 +49,12 @@ Route::get('/work/redirect', [WorkController::class, 'redirectHome'])->name('wor
 
 //gestione profilo
 Route::get('/user/profile/{user}', [ProfileController::class, 'show'])->name('user.profile');
-<<<<<<< HEAD
-Route::get('/user/update', [ProfileController::class, 'create'])->name('user.update');
 
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setlanguagelocale');
-=======
+
 Route::get('/user/update/{profile}', [ProfileController::class, 'create'])->name('user.update');
 Route::post('/user/update/{id}', [ProfileController::class, 'update'])->name('user.update');
 Route::get('/user/delete/{id}', [ProfileController::class, 'destroy'])->name('user.delete');
 
 Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revision'])->name('announcement.revision');
->>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
+
