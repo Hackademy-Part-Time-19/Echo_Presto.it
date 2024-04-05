@@ -27,6 +27,10 @@
                         <button style="background-color: rgb(37, 37, 223); font-weight:bold;border:solid 1px darkblue" type="submit"
                             class="btn btn-success">Accedi</button>
                     </div>
+                    <div class="form-group col-md-6 mt-3">
+                        <button style="background-color: rgb(37, 37, 223); font-weight:bold;border:solid 1px darkblue" type="submit"
+                            class="btn btn-success">Accedi con GitHub</button>
+                    </div>
                 </form>
 
             </div>

@@ -64,7 +64,7 @@ class CreateAnnouncement extends Component
     public function store()
     {
         $this->validate();
-        $announcement = Category::find($this->category)->announcements()->create($this->validate());
+        $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
         if (count($this->images)) {
             foreach ($this->images as $image) {
                 //$this->announcement->images()->create(['path' => $image->store('images', 'public')]);

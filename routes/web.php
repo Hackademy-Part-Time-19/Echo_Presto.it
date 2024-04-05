@@ -61,3 +61,7 @@ Route::get('/user/delete/{id}', [ProfileController::class, 'destroy'])->name('us
 Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revision'])->name('announcement.revision');
 
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setlanguagelocale');
+
+//socialite
+
+
