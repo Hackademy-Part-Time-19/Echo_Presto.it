@@ -2,7 +2,7 @@
     <div style="background-color: #151515" class="container-fluid p-5  shadow mb-4">
         <div class="row">
             <div class="col-12">
-                <h1 class="text-center text-white">{{__('ui.categoryAdd')}} {{ $category->name }}</h1>
+                <h1 class="text-center text-white">{{__('ui.categoryAdd')}} {{  __("categories.$category->name") }}</h1>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
                                 <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                                 <p class="card-text">{{ $announcement->price }} €</p>
                                 <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}">
-                                    {{__('ui.category')}} : {{ $announcement->category->name }}</a></p>
+                                    {{__('ui.category')}} : {{  __("categories.$category->name")}}</a></p>
                                 <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
                                     {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
                                     {{ $announcement->user->name ?? '' }}</p>
@@ -30,7 +30,7 @@
                                     <a href="" class="card-link ">                
                                         <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                             <button style="background: #2414da; width:150px" type="submit"
-                                                class="btn btn-secondary">More</button>
+                                                class="btn btn-secondary">{{__('ui.more')}}</button>
                                         </a>
                                     </a>
                                 </div>

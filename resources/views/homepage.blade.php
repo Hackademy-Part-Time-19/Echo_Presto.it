@@ -96,7 +96,7 @@
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:
-                                {{ $announcement->category->name }}</a></p>
+                                {{  __("categories." . $announcement->category->name)}}</a></p>
                         <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}
                         <div style="display: flex; align-items:center; justify-content:end">
                             <a href="" class="card-link ">

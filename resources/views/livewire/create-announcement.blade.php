@@ -79,7 +79,8 @@
                         @foreach ($images as $key => $image)
                             <div class="col">
                                 <div class="img-preview mx-auto "
-                                    style="background-image: url({{ $image->temporaryUrl() }});height:400px; width:400px; object-fit:cover;">
+                                    style="background-image: url({{ $image->temporaryUrl() }}); height:400px; width:400px; background-repeat: no-repeat;
+                                    object-fit: cover; background-position: center; background-size: cover;">
                                 </div>
                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
                                     wire:click.prevent='removeImage({{ $key }})'>Cancella</button>

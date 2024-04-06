@@ -20,7 +20,7 @@
                     <div class="carousel-inner">
                         @foreach ($announcement->images as $image)
                             <div class="carousel-item @if ($loop->first) active @endif">
-                                <img src="{{ $announcement->images()->first()->getUrl(400,400)}}"
+                                <img src={{ $image->getUrl(400,400)}}
                                     class="img-fluid p-3 rounded" alt="">
                             </div>
                         @endforeach
@@ -53,7 +53,7 @@
                 <h3 class="card-title text-center">{{$announcement->title}}</h3>
                 <h5 class="card-title text-center">{{$announcement->body}}</h5>
                 <p class="card-text">{{$announcement->price}} €</p>
-                <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> Categoria : {{$announcement->category->name}}</a></p>
+                <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}} : {{  __("categories." . $announcement->category->name)}}</a></p>
                 <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
                   {{ $announcement->created_at->format('d/m/Y') }} <br> Autore:
                   {{ $announcement->user->name ?? '' }}</p>
