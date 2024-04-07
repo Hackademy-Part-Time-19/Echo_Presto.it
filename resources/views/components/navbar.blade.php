@@ -71,9 +71,12 @@
                     <a href="{{ route('work') }}"><button style="width: max-content; margin-top:4px" id="btnWork"
                             class="btn btn-success">{{ __('ui.work') }}</button> </a>
                 @endif
+                <a href="{{ route('cart.index') }}"><button style="background-color: #2414da;  border-radius:15px; margin-right:20px; color:white; width: max-content; "
+                    type="submit" class="nav-link" id="btnCart">{{__('ui.cart')}} 
+                </button> </a>
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
-                    <button style="background-color: #2414da;  border-radius:15px; margin-right:20px; color:white"
+                    <button style="background-color: #e81212;  border-radius:15px; margin-right:20px; color:white"
                         type="submit" class="nav-link">Logout</button>
                 </form>
             @endauth

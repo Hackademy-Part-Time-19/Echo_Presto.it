@@ -57,7 +57,7 @@
                 </div>
                 <div class="mb-3">
                     <label style="color:white; text-shadow:2px 2px 2px black;" for="image"
-                        class="form-label">Immagini</label>
+                        class="form-label">{{ __('ui.imm') }}</label>
                     <input wire:model='temporary_images' type="file" name="images" multiple class="form-control"
                         id="images">
                     @error('temporary_images.*')
@@ -74,7 +74,7 @@
         @if (!empty($images))
             <div class="row">
                 <div class="col-12">
-                    <p class="m-3" style="color:white; text-shadow:2px 2px 2px black;">Preview:</p>
+                    <p class="m-3" style="color:white; text-shadow:2px 2px 2px black;">{{ __('ui.preview') }}:</p>
                     <div class="row m-3">
                         @foreach ($images as $key => $image)
                             <div class="col">
@@ -83,7 +83,7 @@
                                     object-fit: cover; background-position: center; background-size: cover;">
                                 </div>
                                 <button type="button" class="btn btn-danger shadow d-block text-center mt-2 mx-auto"
-                                    wire:click.prevent='removeImage({{ $key }})'>Cancella</button>
+                                    wire:click.prevent='removeImage({{ $key }})'>{{ __('ui.del') }}</button>
                             </div>
                         @endforeach
                     </div>

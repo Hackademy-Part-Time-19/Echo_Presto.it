@@ -92,20 +92,28 @@
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}}
                             alt="immagine">
-                        <h3 style="font-weight: 600" class="card-title text-center">{{ $announcement->title }}</h3>
+                        <h3 style="font-weight: 600; width:max-content;" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:
                                 {{  __("categories." . $announcement->category->name)}}</a></p>
                         <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}
-                        <div style="display: flex; align-items:center; justify-content:end">
+                        </p>
+                       
+                        <div style="display: flex; align-items:center; justify-content:center; width:100%;">
                             <a href="" class="card-link ">
-                                <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
-                                    <button style="background: #2414da; width:150px" type="submit"
+                                <a  href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
+                                    <button style="background: #2414da; width:160px; margin-right:50px" type="submit"
                                         class="btn btn-secondary">{{__('ui.more')}}</button>
                                 </a>
                             </a>
+                            <form  action="{{ route('cart.add', ['announcement' => $announcement->id])}}" method="POST">
+                              @csrf
+                              <input type="hidden" name="id" value="{{ $announcement->id }}">
+                              <button style="background: #048cee; width:100%;" type="submit" class="btn btn-primary">{{__('ui.buy')}}</button>
+                          </form>
                         </div>
+                        
                     </div>
                 </div>
             @endforeach

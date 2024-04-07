@@ -20,6 +20,6 @@ class WorkController extends Controller
     public function redirectHome(){
        
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        return redirect('/')->with('message', 'Hai inviato la tua richiesta per diventare revisore');
+        return redirect('/')->with('message',  __('ui.envoy'));
     }
 }
