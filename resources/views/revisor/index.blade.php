@@ -57,18 +57,11 @@
                             <h3 class="card-title text-center">{{ $announcement_to_check->title }}</h3>
                             <h5 class="card-title text-center">{{ $announcement_to_check->body }}</h5>
                             <p class="card-text">{{ $announcement_to_check->price }} €</p>
-<<<<<<< HEAD
+
                             <p class="card-text"><a style="text-decoration: none; color:black;" href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}">
                                 {{__('ui.category')}} : {{ $announcement_to_check->category->name }}</a></p>
                             <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:
                                 {{ $announcement_to_check->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}:
-=======
-                            <p class="card-text"><a style="text-decoration: none; color:black;"
-                                    href="{{ route('categoryShow', ['category' => $announcement_to_check->category]) }}">
-                                    Categoria : {{ $announcement_to_check->category->name }}</a></p>
-                            <p style="color: white; background-color:#6CA7DD" class="card-footer">Pubblicato il:
-                                {{ $announcement_to_check->created_at->format('d/m/Y') }} <br> Autore:
->>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
                                 {{ $announcement_to_check->user->name ?? '' }}</p>
                             <div style="display: flex; align-items:center; justify-content:end">
                                 <a href="" class="card-link ">
