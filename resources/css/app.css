@@ -1,12 +1,5 @@
 @import 'bootstrap';
 
-<<<<<<< HEAD
-
-=======
-*{
-    font-family: 'poppins', sans-serif;
-}
->>>>>>> d612699c74dcafa97206a7570f68fc7eac17149e
 * {
   font-family: 'poppins', sans-serif;
 
@@ -69,8 +62,8 @@
 
 #Slogan {
   color: rgb(255, 255, 255);
-  font-size: 60px;
-
+  font-size: 55px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 700;
   font-style: italic;
   text-align: center;
@@ -78,7 +71,7 @@
   -webkit-text-stroke: #030604 0.9px;
   position: absolute;
   top: 18%;
-  left: 15%;
+  left: 12%;
 
 }
 

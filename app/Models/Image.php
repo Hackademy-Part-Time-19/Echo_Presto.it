@@ -12,13 +12,17 @@ class Image extends Model
 
     protected $fillable = ['path'];
 
-    public function announcement() {
+    public function announcement()
+    {
         return $this->belongsTo(Announcement::class);
     }
 
-    public static function getUrlByFilePath($filePath, $w = null , $h = null){
-       
-        if(!$w && !$h){  return Storage::url($filePath); }
+    public static function getUrlByFilePath($filePath, $w = null, $h = null)
+    {
+
+        if (!$w && !$h) {
+            return Storage::url($filePath);
+        }
 
         $path = dirname($filePath);
         $filename = basename($filePath);
@@ -26,7 +30,8 @@ class Image extends Model
         return Storage::url($file);
     }
 
-    public function getUrl($w = null, $h = null){
+    public function getUrl($w = null, $h = null)
+    {
         return Image::getUrlByFilePath($this->path, $w, $h);
     }
 }

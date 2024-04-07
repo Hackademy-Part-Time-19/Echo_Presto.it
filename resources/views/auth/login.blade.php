@@ -9,7 +9,7 @@
                     alt="">
             </div>
             <div style="padding:50px; color:white; background-color:#6CA7DD;border-top-right-radius:20px;border-bottom-right-radius:20px" class="col-md-8">
-                <form action="{{ route('login') }}" method="POST">
+                <form style="width:900px" action="{{ route('login') }}" method="POST">
                     @csrf
                     <h2 >Accedi su <span style="font-weight: 600">Presto.it</span></h2>
                     <div class="form-row">
@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="form-group col-md-6 mt-3">
-                        <button style="background-color: rgb(37, 37, 223); font-weight:bold;border:solid 1px darkblue" type="submit"
+                        <button style="background-color: rgb(37, 37, 223); font-weight:bold;border:solid 1px darkblue; width:100%" type="submit"
                             class="btn btn-success">Accedi</button>
                     </div>
                 </form>

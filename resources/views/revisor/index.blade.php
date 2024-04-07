@@ -57,7 +57,6 @@
                             <h3 class="card-title text-center">{{ $announcement_to_check->title }}</h3>
                             <h5 class="card-title text-center">{{ $announcement_to_check->body }}</h5>
                             <p class="card-text">{{ $announcement_to_check->price }} €</p>
-
                             <p class="card-text"><a style="text-decoration: none; color:black;" href="{{route('categoryShow',['category'=>$announcement_to_check->category])}}">
                                 {{__('ui.category')}} : {{ $announcement_to_check->category->name }}</a></p>
                             <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}:

@@ -40,6 +40,17 @@ return[
     'us2'=>'Become a Reviewer',
     'more'=>'Show more',
     'search'=>'Search',
-    'cat1'=>'Music',
-
+    $categoriesTranslations = [
+        'Electronica' => 'Electronics',
+        'Arredamento' => 'Furniture',
+        'Libri' => 'Books',
+        'Musica'=>'Music',
+        'Sport'=>'Sport',
+        'Giochi'=>'Games',
+        'Gioielli'=>'Jewelry',
+        'Telefoni'=>'Smartphones',
+        'Abbigliamento'=>'Clothing',
+        'Motori'=>'Engines',
+    ]
+   
 ];

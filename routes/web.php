@@ -4,9 +4,9 @@ use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RevisorController;
 use App\Http\Controllers\AnnouncementController;
-use App\Http\Controllers\ProfileController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -57,4 +57,12 @@ Route::post('/user/update/{id}', [ProfileController::class, 'update'])->name('us
 Route::get('/user/delete/{id}', [ProfileController::class, 'destroy'])->name('user.delete');
 
 Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revision'])->name('announcement.revision');
+
+Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setlanguagelocale');
+
+
+
+
+
+
 

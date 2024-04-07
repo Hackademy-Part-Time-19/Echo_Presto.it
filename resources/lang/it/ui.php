@@ -27,7 +27,7 @@ return[
     'with'=>'Registrati e clicca qui:',
     'us'=>'DIVENTA UN REVISORE',
     'create'=>'Crea il tuo Annuncio',
-    'title'=>'Titolo Annucio',
+    'title'=>'Titolo Annuncio',
     'desc'=>'Descrizione',
     'price'=>'Prezzo',
     'choose'=>'Scegli la categoria',

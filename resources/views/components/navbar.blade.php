@@ -24,7 +24,7 @@
                         @foreach ($categories as $category)
                             <li>
                                 <a style="text-decoration: none;color:white;padding:2px;" class="dropdown-items"
-                                    href="{{ route('categoryShow', compact('category')) }}">{{ $category->name }}</a>
+                                    href="{{ route('categoryShow', compact('category')) }}">{{ __("categories.$category->name")}}</a>
                             </li>
                             <li></li>
                             <hr class="dropdown-divider">
@@ -82,16 +82,16 @@
                 style="height: 20px;width:100px;display:flex;align-items:center;justify-content:center;flex-direction:row;margin-left:50px;">
                 <div style="align-items: center;height: 10px;width:40px;">
                     <x-_locale lang="en" nation="gb" />
-                    <img src="{{ asset('Images/ing.png') }}"style="height: 30px;width:40px;">
+                    <img src="{{ asset('Images/ing.png') }}"style="height: 20px;width:30px;">
 
                 </div>
-                <div style="align-items: center;height: 10px;width:40px;margin-left:30px;">
+                <div style="align-items: center;height: 10px;width:30px;margin-left:30px;">
                     <x-_locale lang="it" nation="it" />
-                    <img src="{{ asset('Images/ita.png') }}" style="height: 30px;width:40px;">
+                    <img src="{{ asset('Images/ita.png') }}" style="height: 20px;width:30px;">
                 </div>
                 <div style="align-items: center;height: 10px;width:40px;margin-left:30px;">
                     <x-_locale lang="de" nation="de" />
-                    <img src="{{ asset('Images/de.jpg') }}" style="height: 30px;width:40px;">
+                    <img src="{{ asset('Images/de.jpg') }}" style="height: 20px;width:30px;">
                 </div>
             </div> 
         </div>
