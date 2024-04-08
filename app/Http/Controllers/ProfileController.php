@@ -79,4 +79,6 @@ class ProfileController extends Controller
         DB::table('users')->where('id', $user_id)->delete();
         return redirect()->route('home');
     }
+
+
 }

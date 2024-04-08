@@ -70,4 +70,5 @@ return [
     'return' => 'Kostenlose Rücksendung',
     'spe2' => 'Kostenloser Versand',
     'support' => 'Kundendienst',
+    'back' => 'Zurück',
 ];

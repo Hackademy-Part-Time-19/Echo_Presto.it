@@ -72,18 +72,9 @@
                             <button class="btn btn-success" style="background-color: #6CA7DD"><a href="{{route("work")}}">{{__('ui.us')}}</a></button>
                         </div>
                         @endif
-
                     </div>
-                    
-
                 </div>
-                
-
-
-
             </div>
-
-
         </footer>
         <div class="footer-copyright">
             <div class="footer-copyright-wrapper">

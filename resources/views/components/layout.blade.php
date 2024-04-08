@@ -12,6 +12,7 @@
 
 <body style="background-color: #fffff2;">
     <x-navbar />
+    <x-back-button />
     <div style="min-height: 70vh;">
         {{ $slot }}
     </div>

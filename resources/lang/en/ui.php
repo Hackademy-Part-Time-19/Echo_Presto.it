@@ -70,5 +70,5 @@ return[
     'spe2'=>'Free Shipping',
     'return'=>'Free return',
     'support'=>'24/7 Support',
-   
+    'back'=>'Back',
 ];

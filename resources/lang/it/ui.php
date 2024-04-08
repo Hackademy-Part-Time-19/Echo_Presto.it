@@ -70,5 +70,6 @@ return[
     'spe2'=>'Spedizione Gratuita',
     'return'=>'Reso Gratuito',
     'support'=>'Supporto 24/7',
-    
+    'back'=>'Torna indietro',
+    'top'=>'Torna su',
 ];
