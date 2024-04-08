@@ -11,14 +11,14 @@
                 <div class="footer-content-column">
                     <div class="footer-logo">
                         <a class="footer-logo-link"href="{{ route('home') }}">
-                            <img src="{{ asset('Images/LogoPrestoFooter.png') }}" style="width:100px;height:100px;">
+                            <img src="{{ asset('Images/LogoPrestoFooter.png') }}" style="width:95px;height:95px;">
                         </a>
                     </div>
 
-                    <div style="display: flex;flex-direction:row;width:1300px;justify-content:center;align-items:center">
+                    <div style="display: flex;flex-direction:row;width:1400px;justify-content:center;align-items:center">
 
-                        <div class="footer-menu" style="flex:3;align-items:center;">
-                            <h2 class="footer-menu-name">{{__('ui.dev')}}</h2>
+                        <div class="footer-menu" style="flex:4;align-items:center; justify-content:center;">
+                            <h2 style="margin-bottom: 12px " class="footer-menu-name">{{__('ui.dev')}}</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
                                     <a class="styleAfooter"
@@ -37,21 +37,31 @@
                                 </li>
                             </ul>
                         </div>
+                        <div class="col-lg-3 col-md-6 col-sm-6" style="flex:4;align-items:center; justify-content:center;">
+                            <div class="footer-content-column">
+                                <h2 style=" width:max-content" class="footer-menu-name">{{__('ui.payment')}}</h2>
+                                <a style="margin-top: 10px;" href="#"><img style="width: 300px; height:100px" src={{ asset('Images/pagamenti.jpg') }} alt=""></a>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6 col-sm-6" style="flex:4;align-items:center; justify-content:center;">
+                            <div class="footer-content-column">
+                                <h2 style=" width:max-content" class="footer-menu-name">{{__('ui.spedition')}}</h2>
+                                <a style="margin-top: 15px;" href="#"><img style="width: 300px; height:100px" src={{ asset('Images/loghi_spedizioni_fin.jpg') }} alt=""></a>
+                            </div>
+                        </div>
 
                         <div class="footer-menu" style="flex:8;display:flex;flex-direction:column;align-items:center;">
-                            <h2 class="footer-menu-name">{{__('ui.cont')}}</h2>
+                            <h2 class="footer-menu-name">{{__('ui.shopping')}}</h2>
                             <ul id="menu-get-started" class="footer-menu-list">
                                 <li>
-                                    <p>vincenzotito@icloud.com</p>
+                                   <p>{{__('ui.spe2')}}</p>
                                 </li>
                                 <li>
-                                   <p>maicol.angelicchio.91@gmail.com</p>
+                                    <p>{{__('ui.return')}}o</p>
                                 </li>
                                 <li>
-                                    <p>ivanlajoya10@gmail.com</p>
-                                </li>
-                                <li>
-                                    <p>diegolombardi199@gmail.com</p>
+                                    <p>{{__('ui.support')}}</p>
                                 </li>
                             </ul>
                         </div>
@@ -64,8 +74,10 @@
                         @endif
 
                     </div>
+                    
 
                 </div>
+                
 
 
 
