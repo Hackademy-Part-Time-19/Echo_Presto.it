@@ -2,6 +2,7 @@
 
 use App\Models\Announcement;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\WorkController;
 use App\Http\Controllers\FrontController;
 use App\Http\Controllers\ProfileController;
@@ -18,11 +19,11 @@ use App\Http\Controllers\AnnouncementController;
 |
 */
 
-Route::get('/',[FrontController::class, 'welcome'])->name('home');
+Route::get('/', [FrontController::class, 'welcome'])->name('home');
 
-Route::get('/categoria/{category}',[FrontController::class, 'categoryShow'])->name('categoryShow');
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('categoryShow');
 
-Route::get('/nuovo/annuncio',[AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('create');
+Route::get('/nuovo/annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('create');
 
 Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('dettaglio');
 
@@ -61,8 +62,12 @@ Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revisi
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setlanguagelocale');
 
 
-
-
-
-
-
+//carrello
+Route::middleware(['auth'])->group(function () {
+  Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
+  Route::post('/cart/add/{announcement}', [CartController::class, 'add'])->name('cart.add');
+  Route::delete('/cart/{cartItem}', [CartController::class, 'remove'])->name('cart.remove');
+  Route::patch('/cart/{item}', [CartController::class, 'update'])->name('cart.update');
+  Route::post('/cart/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+  Route::delete('/destroy', [CartController::class, 'destroy'])->name('destroy');
+});
