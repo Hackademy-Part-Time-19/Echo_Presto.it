@@ -69,7 +69,7 @@ class CreateAnnouncement extends Component
         $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
         if (count($this->images)) {
             foreach ($this->images as $image) {
-            
+
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
 
@@ -87,10 +87,10 @@ class CreateAnnouncement extends Component
         } else {
             session()->flash('message',  __('ui.annSuccess2'));
         }
-        
+
         $this->announcement->user_id = Auth::user()->id;
         $this->announcement->save();
-        
+
         $this->cleanForm();
     }
 
