@@ -57,6 +57,8 @@ Route::get('/user/update/{profile}', [ProfileController::class, 'create'])->name
 Route::post('/user/update/{id}', [ProfileController::class, 'update'])->name('user.update');
 Route::get('/user/delete/{id}', [ProfileController::class, 'destroy'])->name('user.delete');
 
+Route::get('/user/insert/{id}', [ProfileController::class, 'insert'])->name('user.insert');
+
 Route::get('announcement/revision/{id}', [AnnouncementController::class, 'revision'])->name('announcement.revision');
 
 Route::post('/lingua/{lang}', [FrontController::class, 'setLanguage'])->name('setlanguagelocale');
