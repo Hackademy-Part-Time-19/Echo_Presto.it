@@ -92,7 +92,7 @@
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}}
                             alt="immagine">
-                        <h3 style="font-weight: 600; width:max-content;" class="card-title text-center">{{ $announcement->title }}</h3>
+                        <h3 style="font-weight: 600; width:100%" class="card-title text-center">{{ $announcement->title }}</h3>
                         <h5 class="card-title text-center">{{ $announcement->body }}</h5>
                         <p class="card-text">{{ $announcement->price }} €</p>
                         <p class="card-text"><a style="text-decoration: none; color:black" href="{{route('categoryShow',['category'=>$announcement->category])}}"> {{__('ui.category')}}:

@@ -21,12 +21,13 @@ class AnnouncementController extends Controller
      */
     public function showAnnouncement (Announcement $announcement)
     {
+        $announcements = Announcement::where('purchased', false)->get();
         return view('announcement.dettaglio', compact('announcement'));
     }
 
     public function indexAnnouncement ()
     {
-        $announcements = Announcement::orderBy('created_at','desc')-> where('is_accepted', true)->paginate(9);
+        $announcements = Announcement::orderBy('created_at','desc')-> where('is_accepted', true)->where('purchased', false)->paginate(9);
 
         return view('announcement.index', compact('announcements'));
     }

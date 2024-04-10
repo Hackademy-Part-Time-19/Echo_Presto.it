@@ -20,16 +20,26 @@ class CartController extends Controller
         $cart = Cart::firstOrCreate(['user_id' => $request->user()->id]);
         $cartItem = CartItem::firstOrCreate(['cart_id' => $cart->id, 'announcement_id' => $announcement->id]);
         $cartItem->increment('quantity');
+    
+        
+        $announcement = Announcement::find($announcement->id);
+        $announcement->purchased = true;
+        $announcement->save();
+    
         return redirect()->back()->with('message', __('ui.addCart'));
     }
 
     public function remove(CartItem $cartItem)
     {
+        $announcement = $cartItem->announcement;
+
         if ($cartItem->quantity > 1) {
             $cartItem->quantity--;
             $cartItem->save();
         } else {
             $cartItem->delete();
+            $announcement->purchased = false;
+            $announcement->save();
         }
 
         return redirect()->back()->with('message',  __('ui.delCart'));
@@ -46,7 +56,13 @@ class CartController extends Controller
     public function checkout(Request $request)
     {
         $cart = Cart::where('user_id', $request->user()->id)->first();
-
+    
+        foreach ($cart->items as $item) {
+            $announcement = $item->announcement;
+            $announcement->purchased = true;
+            $announcement->save();
+        }
+    
         $cart->items()->delete();
         return redirect()->route('home')->with('message',  __('ui.buy2'));
     }

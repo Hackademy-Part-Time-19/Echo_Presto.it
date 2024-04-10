@@ -89,6 +89,7 @@ class CreateAnnouncement extends Component
         }
 
         $this->announcement->user_id = Auth::user()->id;
+        $this->announcement->purchased = false;
         $this->announcement->save();
 
         $this->cleanForm();
