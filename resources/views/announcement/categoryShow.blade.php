@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="row">
-                    @forelse($category->announcements as $announcement)
+                    @forelse($announcements as $announcement)
                         <div class="card m-4 col-12 col-md-6 row m-2  d-flex  text-center"
                             style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
                             <div class="card-body">
@@ -33,13 +33,13 @@
                                     {{ __('ui.publish') }}:
                                     {{ $announcement->created_at->format('d/m/Y') }} <br> {{ __('ui.author') }}:
                                     {{ $announcement->user->name ?? '' }}</p>
-                                    <div style="display: flex; align-items:center; justify-content:center; width:100%;">
-                                        <a href="" class="card-link ">
+                                    <div style="display: flex; align-items:center; justify-content:space-between; width:100%;">
+                                        
                                             <a  href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                                 <button style="background: #2414da; width:160px; margin-right:50px" type="submit"
                                                     class="btn btn-secondary">{{__('ui.more')}}</button>
                                             </a>
-                                        </a>
+                                       
                                         <form  action="{{ route('cart.add', ['announcement' => $announcement->id])}}" method="POST">
                                           @csrf
                                           <input type="hidden" name="id" value="{{ $announcement->id }}">

@@ -30,8 +30,8 @@
                                     {{ __('ui.publish') }}: {{ $announcement->created_at->format('d/m/Y') }} <br>
                                     {{ __('ui.author') }}: {{ $announcement->user->name ?? '' }}
                                 </p>
-                                <div style="display: flex; align-items:center; justify-content:end">
-                                    <a href="" class="card-link ">
+                                <div style="display: flex; align-items:center; justify-content:space-between; width:100%;">
+                                   
                                         @if (Auth::check() && Auth::user()->is_revisor == 1)
                                         <a href="{{ route('announcement.revision', $announcement->id) }}" class="card-link ">
                                             <button style="width:150px" type="submit" class="btn btn-danger">{{ __('ui.rev2') }}</button>
@@ -40,12 +40,12 @@
                                         <a href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                             <button style="background: #2414da; width:150px" type="submit" class="btn btn-secondary">{{ __('ui.more') }}</button>
                                         </a>
-                                    </a>
+                                   
                                 </div>
                                 <form style="margin-top: 12px" action="{{ route('cart.add', ['announcement' => $announcement->id]) }}" method="POST">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $announcement->id }}">
-                                    <button style="background: #048cee;; width:220px;" type="submit" class="btn btn-primary">{{ __('ui.buy') }}</button>
+                                    <button style="background: #048cee;; width:100%;" type="submit" class="btn btn-primary">{{ __('ui.buy') }}</button>
                                 </form>
                             </div>
                         </div>
