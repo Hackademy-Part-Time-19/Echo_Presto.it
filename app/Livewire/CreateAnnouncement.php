@@ -2,8 +2,6 @@
 
 namespace App\Livewire;
 
-use App\Jobs\GoogleVisionLabelImage;
-use App\Jobs\GoogleVisionSafeSearch;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\ResizeImage;
@@ -73,8 +71,13 @@ class CreateAnnouncement extends Component
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
 
+                Removefaces::withChain([
+                    new ResizeImage($newImage->path , 400, 400),
+                    new GoogleVisionSafeSearch($newImage->id),
+                    new GoogleVisionLabelImage($newImage->id)
+                ])->dispatch($newImage->id);
+
                 dispatch(new ResizeImage($newImage->path , 400, 400));
-                dispatch(new GoogleVisionSafeSearch($newImage->id));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
@@ -82,16 +85,13 @@ class CreateAnnouncement extends Component
             Auth::user()->announcements()->save($this->announcement);
         }
         if(Auth::user()->is_revisor==1){
-            session()->flash('message',  __('ui.annSuccess'));
-            $this->announcement->is_accepted = 1;
-        } else {
-            session()->flash('message',  __('ui.annSuccess2'));
+            session()->flash('message', 'Annuncio inserito con successo');
+            DB::table('announcements')->update(['is_accepted' => 1]);
         }
-
-        $this->announcement->user_id = Auth::user()->id;
-        $this->announcement->purchased = false;
-        $this->announcement->save();
-
+        else{
+            session()->flash('message', 'Annuncio inserito con successo, sarà visibile dopo la revisione');
+        }
+        DB::table('announcements')->update(['user_id' => Auth::user()->id]);
         $this->cleanForm();
     }
 
