@@ -68,11 +68,16 @@ class CreateAnnouncement extends Component
     {
         $this->validate();
         $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
+        $logoPath = public_path('Images/LogoFooter2.png');
+        $logo = imagecreatefrompng($logoPath);
         if (count($this->images)) {
             foreach ($this->images as $image) {
 
                 $newFileName = "announcements/{$this->announcement->id}";
                 $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
+                $imagePath = public_path('storage/' . $newImage->path);
+                
+                $this->applyWatermark($imagePath, $logo);
 
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path , 400, 400),
@@ -97,6 +102,25 @@ class CreateAnnouncement extends Component
         DB::table('announcements')->update(['user_id' => Auth::user()->id]);
         $this->cleanForm();
     }
+
+    private function applyWatermark($imagePath, $logo)
+{
+    $image = imagecreatefromjpeg($imagePath);
+
+    $imageWidth = imagesx($image);
+    $imageHeight = imagesy($image);
+    $logoWidth = imagesx($logo);
+    $logoHeight = imagesy($logo);
+
+    $x = $imageWidth - $logoWidth - 10;
+    $y = $imageHeight - $logoHeight - 10;
+
+    imagecopy($image, $logo, $x, $y, 0, 0, $logoWidth, $logoHeight);
+
+    imagejpeg($image, $imagePath);
+
+    imagedestroy($image);
+}
 
     public function updated($propertyName)
     {
