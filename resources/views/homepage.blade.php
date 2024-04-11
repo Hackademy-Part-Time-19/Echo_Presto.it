@@ -87,7 +87,7 @@
         <div style="align-items:center; justify-content:center; " class="row m-2 d-flex  text-center">
             @foreach ($announcements as $announcement)
 
-                <div class="card m-4 col-12 col-md-6" style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; ">
+                <div class="card m-4 col-12 col-md-6" style="width: 22rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; border: 7px solid white;border-radius: 8px; ">
 
                     <div class="card-body">
                         <img style="border-radius:5px;" class="img-fluid" src={{!$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400,400) : "https://picsum.photos/400/400"}}
@@ -100,17 +100,17 @@
                         <p style="color: white; background-color:#6CA7DD" class="card-footer">{{__('ui.publish')}}: {{ $announcement->created_at->format('d/m/Y') }} <br> {{__('ui.author')}}: {{ $announcement->user->name ?? '' }}
                         </p>
                        
-                        <div style="display: flex; align-items:center; justify-content:center; width:100%;">
-                            <a href="" class="card-link ">
+                        <div style="display: flex; align-items:center; justify-content:space-between; width:100%;">
+                           
                                 <a  href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
-                                    <button style="background: #2414da; width:160px; margin-right:50px" type="submit"
+                                    <button style="background: #2414da; width:max-content;" type="submit"
                                         class="btn btn-secondary">{{__('ui.more')}}</button>
                                 </a>
-                            </a>
+                           
                             <form  action="{{ route('cart.add', ['announcement' => $announcement->id])}}" method="POST">
                               @csrf
                               <input type="hidden" name="id" value="{{ $announcement->id }}">
-                              <button style="background: #048cee; width:100%;" type="submit" class="btn btn-primary">{{__('ui.buy')}}</button>
+                              <button style="background: #048cee; width:max-content;" type="submit" class="btn btn-primary">{{__('ui.buy')}}</button>
                           </form>
                         </div>
                         

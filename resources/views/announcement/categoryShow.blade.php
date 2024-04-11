@@ -33,13 +33,13 @@
                                     {{ __('ui.publish') }}:
                                     {{ $announcement->created_at->format('d/m/Y') }} <br> {{ __('ui.author') }}:
                                     {{ $announcement->user->name ?? '' }}</p>
-                                    <div style="display: flex; align-items:center; justify-content:center; width:100%;">
-                                        <a href="" class="card-link ">
+                                    <div style="display: flex; align-items:center; justify-content:space-between; width:100%;">
+                                        
                                             <a  href="{{ route('dettaglio', compact('announcement')) }}" class="card-link ">
                                                 <button style="background: #2414da; width:160px; margin-right:50px" type="submit"
                                                     class="btn btn-secondary">{{__('ui.more')}}</button>
                                             </a>
-                                        </a>
+                                       
                                         <form  action="{{ route('cart.add', ['announcement' => $announcement->id])}}" method="POST">
                                           @csrf
                                           <input type="hidden" name="id" value="{{ $announcement->id }}">
