@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use App\Models\Image;
 use Illuminate\Bus\Queueable;
+use Spatie\Image\Manipulations;
 use Illuminate\Queue\SerializesModels;
 use Spatie\Image\Image as SpatieImage;
 use Illuminate\Queue\InteractsWithQueue;
@@ -67,6 +68,6 @@ class RemoveFaces implements ShouldQueue
             $image->save($srcPath);
         }
 
-        $imageannotator->close();
+        $imageAnnotator->close();
     }
 }
