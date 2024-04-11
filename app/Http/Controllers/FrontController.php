@@ -22,7 +22,7 @@ class FrontController extends Controller
     public function categoryShow(Category $category)
     {
         $announcements = $category->announcements() ->where('purchased', false)->where('is_accepted', true) ->get();
-    
+
         return view('announcement.categoryShow', compact('category', 'announcements'));
     }
 
