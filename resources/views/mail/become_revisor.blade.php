@@ -8,12 +8,12 @@
 </head>
 <body>
   <div>
-    <h1>Un Utente ha richiesto di lavorare con noi</h1>
-    <h2>Ecco i suoi dati:</h2>
+    <h1>{{__('ui.mailTrap')}}</h1>
+    <h2>{{__('ui.mailTrap2')}}</h2>
     <p>{{$user->name}}</p>
     <p>{{$user->email}}</p>
-    <p>Se vuoi renderlo revisore clicca qui:</p>
-    <a href="{{route('make.revisor',compact('user'))}}"> Rendi revisore</a>
+    <p>{{__('ui.mailTrap3')}}</p>
+    <a href="{{route('make.revisor',compact('user'))}}"> {{__('ui.mailTrap4')}}</a>
   
   </div>
   
