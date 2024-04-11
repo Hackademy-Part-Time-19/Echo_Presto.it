@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Livewire;
 
 use Livewire\Component;
@@ -9,7 +10,6 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Facades\DB;
-use App\Jobs\GoogleVisionLabelImage;
 use App\Jobs\GoogleVisionSafeSearch;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
