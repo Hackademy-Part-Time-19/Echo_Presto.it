@@ -72,4 +72,8 @@ return[
     'support'=>'Supporto 24/7',
     'back'=>'Torna indietro',
     'top'=>'Torna su',
+    'mailTrap'=>'Un Utente ha richiesto di lavorare con noi',
+    'mailTrap2'=>'Ecco i suoi  dati:',
+    'mailTrap3'=>'Se vuoi renderlo revisore clicca qui:',
+    'mailTrap4'=>'Rendi Revisore',
 ];

@@ -71,4 +71,8 @@ return[
     'return'=>'Free return',
     'support'=>'24/7 Support',
     'back'=>'Back',
+    'mailTrap'=>'A user has sent a request to become a reviewer',
+    'mailTrap2'=>'Here are their data:',
+    'mailTrap3'=>'if you want to accept it click here',
+    'mailtrap4'=>' Make Reviewer',
 ];

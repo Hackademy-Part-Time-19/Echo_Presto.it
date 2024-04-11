@@ -33,7 +33,7 @@
                                         Domenico</a>
                                 </li>
                                 <li>
-                                    <a class="styleAfooter" href="#" target="blank">Diego Lombardi</a>
+                                    <a class="styleAfooter" href="https://www.linkedin.com/in/diego-franco-lombardi-0a071019a/" target="blank">Diego Lombardi</a>
                                 </li>
                             </ul>
                         </div>
@@ -58,7 +58,7 @@
                                    <p>{{__('ui.spe2')}}</p>
                                 </li>
                                 <li>
-                                    <p>{{__('ui.return')}}o</p>
+                                    <p>{{__('ui.return')}}</p>
                                 </li>
                                 <li>
                                     <p>{{__('ui.support')}}</p>

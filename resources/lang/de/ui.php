@@ -36,7 +36,7 @@ return [
     'noAdd' => 'Es gibt keine Angebote für diese Suche',
     'newAdd' => 'Klicken Sie hier, um eine Anzeige zu erstellen',
     'pubbb' => 'Veröffentlichen',
-    'request' => 'Antrag, Reviewer zu werden',
+    'request' => 'Antrag, Revisor zu werden',
     'us2' => 'Prüfer werden',
     'more' => 'Mehr anzeigen',
     'search' => 'Suche',
@@ -71,4 +71,8 @@ return [
     'spe2' => 'Kostenloser Versand',
     'support' => 'Kundendienst',
     'back' => 'Zurück',
+    'mailTrap'=>'Ein Benutzer hat eine Anfrage gesendet, um Revisor zu werden',
+    'mailTrap2'=>'Hier sind ihre Daten:',
+    'mailTrap3'=>'Wenn Sie die Anfrage akzeptieren möchten, klicken Sie auf den folgenden Link:',
+    'mailTrap4'=>'zum Revisor machen',
 ];
