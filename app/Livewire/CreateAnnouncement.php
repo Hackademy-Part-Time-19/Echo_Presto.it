@@ -68,35 +68,34 @@ class CreateAnnouncement extends Component
     {
         $this->validate();
         $this->announcement = Category::find($this->category)->announcements()->create($this->validate());
-        $logoPath = public_path('Images/LogoFooter2.png');
+        $logoPath = public_path('Images/LogoF1.png');
         $logo = imagecreatefrompng($logoPath);
         if (count($this->images)) {
             foreach ($this->images as $image) {
 
                 $newFileName = "announcements/{$this->announcement->id}";
-                $newImage = $this->announcement->images()->create(['path'=>$image->store($newFileName,'public')]);
+                $newImage = $this->announcement->images()->create(['path' => $image->store($newFileName, 'public')]);
                 $imagePath = public_path('storage/' . $newImage->path);
-                
+
                 $this->applyWatermark($imagePath, $logo);
 
                 RemoveFaces::withChain([
-                    new ResizeImage($newImage->path , 400, 400),
+                    new ResizeImage($newImage->path, 400, 400),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
 
-                dispatch(new ResizeImage($newImage->path , 400, 400));
+                dispatch(new ResizeImage($newImage->path, 400, 400));
             }
 
             File::deleteDirectory(storage_path('/app/livewire-tmp'));
 
             Auth::user()->announcements()->save($this->announcement);
         }
-        if(Auth::user()->is_revisor==1){
+        if (Auth::user()->is_revisor == 1) {
             session()->flash('message', 'Annuncio inserito con successo');
             DB::table('announcements')->update(['is_accepted' => 1]);
-        }
-        else{
+        } else {
             session()->flash('message', 'Annuncio inserito con successo, sarà visibile dopo la revisione');
         }
         DB::table('announcements')->update(['user_id' => Auth::user()->id]);
@@ -104,23 +103,49 @@ class CreateAnnouncement extends Component
     }
 
     private function applyWatermark($imagePath, $logo)
-{
-    $image = imagecreatefromjpeg($imagePath);
+    {
 
-    $imageWidth = imagesx($image);
-    $imageHeight = imagesy($image);
-    $logoWidth = imagesx($logo);
-    $logoHeight = imagesy($logo);
 
-    $x = $imageWidth - $logoWidth - 10;
-    $y = $imageHeight - $logoHeight - 10;
+        $extension = strtolower(pathinfo($imagePath, PATHINFO_EXTENSION));
+        if ($extension === 'jpg' || $extension === 'jpeg' || $extension === 'png' || $extension === 'gif') {
+            
+            switch ($extension) {
+                case 'jpg':
+                case 'jpeg':
+                    $image = imagecreatefromjpeg($imagePath);
+                    break;
+                case 'png':
+                    $image = imagecreatefrompng($imagePath);
+                    break;
+                case 'gif':
+                    $image = imagecreatefromgif($imagePath);
+                    break;
+                    
+            }
 
-    imagecopy($image, $logo, $x, $y, 0, 0, $logoWidth, $logoHeight);
 
-    imagejpeg($image, $imagePath);
+            $imageWidth = imagesx($image);
+            $imageHeight = imagesy($image);
+            $logoWidth = imagesx($logo);
+            $logoHeight = imagesy($logo);
 
-    imagedestroy($image);
-}
+            $x = $imageWidth - $logoWidth - 10;
+            $y = $imageHeight - $logoHeight -10;
+
+            imagecopy($image, $logo, $x, $y, 0, 0, $logoWidth, $logoHeight);
+
+            imagejpeg($image, $imagePath);
+
+            imagedestroy($image);
+            imagedestroy($logo);
+        } else {
+            
+            return response()->json(['error' => 'Nessuna immagine caricata.'], 400);
+        }
+
+        
+        return response()->json(['success' => 'Watermark applicato con successo.']);
+    }
 
     public function updated($propertyName)
     {
