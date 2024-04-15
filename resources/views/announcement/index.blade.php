@@ -20,8 +20,8 @@
                         <div class="card m-4 col-12 col-md-6" style="width: 24rem;  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; ">
                             <div class="card-body">
                                 <img style="border-radius:5px; " class="img-fluid" src="{{ !$announcement->images()->get()->isEmpty() ? $announcement->images()->first()->getUrl(400, 400) : 'https://picsum.photos/400/400' }}" alt="immagine">
-                                <h3 class="card-title text-center">{{ $announcement->title }}</h3>
-                                <h5 class="card-title text-center">{{ $announcement->body }}</h5>
+                                <h3 class="card-title text-center" style="font-weight:bold;">{{ $announcement->title }}</h3>
+                                <h5 class="card-title text-center" style=" overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">{{ $announcement->body }}</h5>
                                 <p class="card-text">{{ $announcement->price }} €</p>
                                 <p class="card-text"><a style="text-decoration: none; color:black" href="{{ route('categoryShow', ['category' => $announcement->category]) }}">
                                         {{ __('ui.category') }} :
