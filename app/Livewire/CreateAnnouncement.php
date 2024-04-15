@@ -109,7 +109,7 @@ class CreateAnnouncement extends Component
 
         $extension = strtolower(pathinfo($imagePath, PATHINFO_EXTENSION));
         if ($extension === 'jpg' || $extension === 'jpeg' || $extension === 'png' || $extension === 'gif') {
-            
+
             switch ($extension) {
                 case 'jpg':
                 case 'jpeg':
@@ -121,7 +121,7 @@ class CreateAnnouncement extends Component
                 case 'gif':
                     $image = imagecreatefromgif($imagePath);
                     break;
-                    
+
             }
 
 
@@ -140,11 +140,11 @@ class CreateAnnouncement extends Component
             imagedestroy($image);
             imagedestroy($logo);
         } else {
-            
+
             return response()->json(['error' => 'Nessuna immagine caricata.'], 400);
         }
 
-        
+
         return response()->json(['success' => 'Watermark applicato con successo.']);
     }
 

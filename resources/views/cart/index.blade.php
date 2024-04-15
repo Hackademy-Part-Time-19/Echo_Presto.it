@@ -19,7 +19,6 @@
                         <p class="card-text">Prezzo: {{ $item->announcement->price }} €</p>
                     </div>
                     <div style="display: flex; align-items:center;">
-                        <div>@livewire('cart-component', ['itemId' => $item->id])</div>
                         <div>
                             <form method="POST" action="{{ route('cart.remove', ['cartItem' => $item->id]) }}">
                                 @csrf
@@ -38,13 +37,13 @@
                 @csrf
                 <p class="lead">{{ __('ui.total') }}: {{ $cart->totalPrice() }} €</p>
                 <button type="submit" class="btn btn-primary"
-                    style="width:100%;background-color: #2414da;">{{ __('ui.checkout') }}</button>
+                    style="width:20%;background-color: #2414da;">{{ __('ui.checkout') }}</button>
             </form>
             <form action="{{ route('destroy') }}" method="POST">
                 @csrf
                 @method('DELETE')
                 <button class="btn btn-primary"
-                    style="background: #e80808; width:max-content; border-radius:10px;color:white; width:100%; margin-top:10px">{{ __('ui.delete') }}</button>
+                    style="background: #e80808; width:max-content; border-radius:10px;color:white; width:20%; margin-top:10px">{{ __('ui.delete') }}</button>
             </form>
         @else
             <p>{{ __('ui.cart2') }}</p>
