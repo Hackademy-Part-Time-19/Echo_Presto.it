@@ -6,10 +6,10 @@
                 <img src="{{ asset('Images/LogoPrestoNav.png') }}"
                     style="width: 50px; margin-right:1vw; margin-left:2vw;">
             </a>
-            <a style="margin-left: 50px" class="nav-link active" aria-current="page"
+            <a style="margin-left: 50px" class="nav-link active hover-effect" aria-current="page"
                 href="{{ route('announcement.index') }}">{{ __('ui.ann') }}</a>
             @auth
-                <a style="margin-left: 50px" class="nav-link active" aria-current="page"
+                <a style="margin-left: 50px" class="nav-link active hover-effect" aria-current="page"
                     href="{{ route('create') }}">{{ __('ui.insert') }}</a>
 
                 <div class="btn-group" style="margin-left: 50px">
@@ -34,7 +34,7 @@
                 </div>
                 @if (Auth::user()->is_revisor)
                     <li style="padding-left: 30px; display:flex; align-items:center; " class="nav-iem">
-                        <a class="nav-link btn btn-outline btn-sm position-relative" href="{{ route('revisor.index') }}">
+                        <a class="nav-link btn btn-outline btn-sm position-relative hover-effect" href="{{ route('revisor.index') }}">
                             {{ __('ui.rev') }}
                             <span style="margin: 12px"
                                 class="position-absolute top-20 start-100 translate-middle badge rounded-pill bg-danger">

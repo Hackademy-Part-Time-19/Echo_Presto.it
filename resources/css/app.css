@@ -43,6 +43,15 @@
 
 }
 
+.hover-effect { 
+  transition: color 0.3s, text-decoration 0.3s; 
+}
+
+
+.hover-effect:hover {
+  color: #0635dc; 
+}
+
 
 
 #HeaderHomepage {
