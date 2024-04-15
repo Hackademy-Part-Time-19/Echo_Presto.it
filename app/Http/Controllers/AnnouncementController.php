@@ -22,7 +22,7 @@ class AnnouncementController extends Controller
     public function showAnnouncement (Announcement $announcement)
     {
         $announcements = Announcement::where('purchased', 0)->get();
-        dd($announcement);
+        
         return view('announcement.dettaglio', compact('announcement'));
     }
 
